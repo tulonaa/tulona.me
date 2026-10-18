@@ -124,6 +124,13 @@ a.primary:hover{color:var(--signal)}
 .c-links a:hover{color:var(--signal)}
 .legal{color:var(--ink-3);flex-wrap:wrap;justify-content:space-between;gap:8px;padding-block:24px 48px;font-size:13px;display:flex}
 
+@media (width>1000px){
+  .contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
+  .contact .kicker{grid-area:1/1/auto/-1}
+  .say{grid-area:2/1/auto/span 7;font-size:clamp(40px,5.6vw,72px)}
+  .c-row{grid-area:2/8/auto/-1;grid-template-columns:minmax(0,1fr);margin-top:18px;align-self:start}
+  .legal{grid-area:3/1/auto/-1}
+}
 @media (width<=1000px){
   .head-row,.nav{gap:20px}
   .hello-link{display:none}
