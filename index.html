@@ -74,7 +74,7 @@ a{color:inherit;text-decoration:none}
 .hero-cta{flex-wrap:wrap;align-items:center;gap:14px 26px;display:flex}
 
 /* "Tulona is ..." tagline */
-.is-line{display:flex;align-items:baseline;justify-content:center;flex-wrap:wrap;gap:.3em;margin-top:28px;font:600 clamp(22px,2.2vw,28px)/1.1 var(--display);letter-spacing:-.035em}
+.is-line{display:flex;align-items:baseline;flex-wrap:wrap;gap:.3em;margin-top:28px;font:600 clamp(22px,2.2vw,28px)/1.1 var(--display);letter-spacing:-.035em}
 .is-label{background:var(--soft);padding:.08em .3em;border-radius:3px}
 .rot{display:inline-grid;font:600 clamp(30px,3.2vw,42px)/1 "Caveat","Segoe Script","Bradley Hand",cursive;letter-spacing:0;color:var(--signal)}
 .rot span{grid-area:1/1;visibility:hidden;white-space:nowrap}
@@ -127,9 +127,10 @@ a.primary:hover{color:var(--signal)}
 @media (width>1000px){
   .contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
   .contact .kicker{grid-area:1/1/auto/-1}
-  .say{grid-area:2/1/auto/span 7;font-size:clamp(40px,5.6vw,72px)}
-  .c-row{grid-area:2/8/auto/-1;grid-template-columns:minmax(0,1fr);margin-top:18px;align-self:start}
-  .legal{grid-area:3/1/auto/-1}
+  .say{grid-area:2/1/auto/span 8}
+  .contact .is-line{grid-area:2/9/auto/-1;align-self:center;margin-top:18px}
+  .c-row{grid-area:3/1/auto/-1}
+  .legal{grid-area:4/1/auto/-1}
 }
 @media (width<=1000px){
   .head-row,.nav{gap:20px}
@@ -155,12 +156,10 @@ a.primary:hover{color:var(--signal)}
   .nav a:after{bottom:0}
   .hero-in{grid-template-columns:minmax(0,1fr) 136px;column-gap:18px;padding-block:28px 32px}
   .hero-kicker{grid-area:1/1;align-self:center;font-size:12px}
-  .portrait{display:contents}
-  .portrait img{grid-area:1/2}
-  .is-line{grid-area:3/1/auto/-1;margin-top:22px;justify-content:flex-start}
+  .portrait{grid-area:1/2}
   .portrait figcaption{display:none}
   .statement{letter-spacing:-.045em;grid-area:2/1/auto/-1;margin-top:26px;font-size:clamp(32px,7.5vw,49px);line-height:1.07}
-  .hero-foot{grid-area:4/1/auto/-1;gap:22px;padding-top:22px}
+  .hero-foot{grid-area:3/1/auto/-1;gap:22px;padding-top:22px}
   .bio{font-size:16px}
   .hero-cta{gap:16px 22px}
   .section,.about{padding-top:56px}
@@ -216,11 +215,6 @@ a.primary:hover{color:var(--signal)}
     <figure class="portrait">
       <img src="portrait.jpg" width="900" height="900" alt="Portrait of Sonia Sultana Tulona" fetchpriority="high">
       <figcaption><span>Sonia Sultana Tulona</span><span>Communications</span></figcaption>
-      <p class="is-line">
-        <span class="sr-only">Tulona is writing, designing, traveling, lifting and having fun.</span>
-        <span class="is-label" aria-hidden="true">Tulona is</span>
-        <span class="rot" aria-hidden="true"><span class="on">writing</span><span>designing</span><span>traveling</span><span>lifting</span><span>having fun</span></span>
-      </p>
     </figure>
     <div class="hero-foot">
       <p class="bio">I’m Tulona. I manage partnerships and collaborations and run outreach &amp; campaigns for the <a href="https://wpdeveloper.com/">WPDeveloper</a> and <a href="https://storeware.io/">Storeware</a> product lines, from the “hi there” to the final published feature.</p>
@@ -274,6 +268,11 @@ a.primary:hover{color:var(--signal)}
   <section id="contact" class="contact">
     <p class="kicker">Say hello</p>
     <h2 class="say">Good things start<br><span class="dim">with a conversation.</span></h2>
+    <p class="is-line">
+      <span class="sr-only">Tulona is writing, designing, traveling, lifting and having fun.</span>
+      <span class="is-label" aria-hidden="true">Tulona is</span>
+      <span class="rot" aria-hidden="true"><span class="on">writing</span><span>designing</span><span>traveling</span><span>lifting</span><span>having fun</span></span>
+    </p>
     <div class="c-row">
       <div>
         <span class="lab">Email</span>
