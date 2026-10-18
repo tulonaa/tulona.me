@@ -53,6 +53,9 @@ a{color:inherit;text-decoration:none}
 .head-end{justify-content:flex-end;align-items:center;gap:18px;display:flex}
 .hello-link{border:1px solid var(--line);white-space:nowrap;border-radius:4px;align-items:center;gap:20px;min-height:42px;padding:0 17px;font-size:13px;font-weight:500;display:inline-flex}
 .hello-link:hover{border-color:var(--ink)}
+.cv-link{background:var(--ink);color:var(--bg);border:1px solid var(--ink);white-space:nowrap;border-radius:4px;align-items:center;gap:10px;min-height:42px;padding:0 17px;font-size:13px;font-weight:500;display:inline-flex;transition:background-color .2s,color .2s}
+.cv-link:hover{background:var(--bg);color:var(--ink)}
+.cv-link svg{width:14px;height:14px}
 .theme-picker{color:var(--ink);align-items:center;display:inline-flex;position:relative}
 .theme-picker svg{pointer-events:none;width:16px;height:16px;position:absolute;left:9px}
 .theme-picker select{background:var(--bg);min-height:44px;color:inherit;font:500 12px/1 var(--display);cursor:pointer;border:1px solid transparent;border-radius:4px;padding:0 6px 0 31px}
@@ -150,7 +153,8 @@ a.primary:hover{color:var(--signal)}
   .wordmark{grid-area:1/1}
   .brand-mark{width:34px;height:34px}
   .wordmark b{font-size:21px}
-  .head-end{grid-area:1/2}
+  .head-end{grid-area:1/2;gap:8px}
+  .cv-link{min-height:36px;padding:0 12px;gap:8px}
   .nav{border-top:1px solid var(--line);grid-area:2/1/auto/-1;justify-content:space-between;gap:12px}
   .nav a{min-height:44px;font-size:13px}
   .nav a:after{bottom:0}
@@ -194,11 +198,12 @@ a.primary:hover{color:var(--signal)}
     </a>
     <nav class="nav" aria-label="Sections">
       <a href="#work">Work</a>
-      <a href="#products">Products</a>
+      <a href="#products">Brands</a>
       <a href="#about">About</a>
     </nav>
     <div class="head-end">
       <a class="hello-link" href="#contact">Let’s talk</a>
+      <a class="cv-link" href="https://tulonaa.github.io/tulona-portfolio/Sonia_Sultana_Tulona_Resume.pdf" target="_blank" rel="noopener">Download CV <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v8m0 0L4.5 6.5M8 10l3.5-3.5M3 13h10"/></svg></a>
       <label class="theme-picker">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 2a6 6 0 0 0 0 12z" fill="currentColor"/></svg>
         <span class="sr-only">Color theme</span>
@@ -214,7 +219,7 @@ a.primary:hover{color:var(--signal)}
     <h1 class="statement"><span>I get good products</span><span>in front of the</span><span>right people.</span></h1>
     <figure class="portrait">
       <img src="portrait.jpg" width="900" height="900" alt="Portrait of Sonia Sultana Tulona" fetchpriority="high">
-      <figcaption><span>Sonia Sultana Tulona</span><span>Communications</span></figcaption>
+      <figcaption><span>Sonia Sultana Tulona</span><span>Communication Specialist</span></figcaption>
     </figure>
     <div class="hero-foot">
       <p class="bio">I’m Tulona. I manage partnerships and collaborations and run outreach &amp; campaigns for the <a href="https://wpdeveloper.com/">WPDeveloper</a> and <a href="https://storeware.io/">Storeware</a> product lines, from the “hi there” to the final published feature.</p>
@@ -226,7 +231,7 @@ a.primary:hover{color:var(--signal)}
   </section>
 
   <div class="stats">
-    <div class="stat"><b>Outreach</b><span>External email, creators and publishers</span></div>
+    <div class="stat"><b>Outreach</b><span>External email, influencers, creators and publishers</span></div>
     <div class="stat"><b>Partnerships</b><span>Reciprocal deals and client success</span></div>
     <div class="stat"><b>Campaigns</b><span>Launches, promo kits and resources</span></div>
     <div class="stat"><b>Design</b><span>Banners and campaign visuals</span></div>
@@ -234,8 +239,8 @@ a.primary:hover{color:var(--signal)}
 
   <section id="about" class="about">
     <h2>The conversations around the product matter as much as the product.</h2>
-    <p class="lede">I handle who we write to, what we offer them, and how a partnership gets agreed, for every product in the portfolio.</p>
-    <p class="aside">Day to day that means outreach and email, campaigns, review blogs, listicle inclusions, backlink exchanges, promo kits and banner design.</p>
+    <p class="lede">I handle who we write to, what we offer them, and how a partnership gets agreed, across the entire product portfolio.</p>
+    <p class="aside">Day-to-day work spans communication strategy, campaign planning, brand partnerships, content collaborations, promotional materials, closing deals, and relationship management across multiple channels.</p>
   </section>
 
   <section id="work" class="section">
@@ -256,12 +261,12 @@ a.primary:hover{color:var(--signal)}
 
   <section id="products" class="section">
     <div class="sec-head">
-      <h2>Products I work across.</h2>
+      <h2>Brands I work across.</h2>
       <p class="side">Two product lines</p>
     </div>
     <ul class="cos">
-      <li><a class="co" href="https://wpdeveloper.com"><span class="co-year">WordPress</span><span class="co-name">WPDeveloper</span><span class="co-what wide">Essential Addons, Essential Blocks, BetterDocs, Templately, NotificationX, BetterLinks, xSpeed Cache, ThinkRank, BetterShield and more.</span><span class="co-go" aria-hidden="true">→</span></a></li>
-      <li><a class="co" href="https://storeware.io"><span class="co-year">Shopify</span><span class="co-name">Storeware</span><span class="co-what wide">StoreSEO, StoreFAQ and BetterDocs for Shopify.</span><span class="co-go" aria-hidden="true">→</span></a></li>
+      <li><a class="co" href="https://wpdeveloper.com"><span class="co-year">WordPress</span><span class="co-name">WPDeveloper</span><span class="co-what wide">Essential Addons, Essential Blocks, BetterDocs, Templately, EmbedPress, NotificationX, BetterLinks, xSpeed Cache, ThinkRank, BetterShield, Disable Comments and more.</span><span class="co-go" aria-hidden="true">→</span></a></li>
+      <li><a class="co" href="https://storeware.io"><span class="co-year">Shopify</span><span class="co-name">Storeware</span><span class="co-what wide">StoreSEO, StoreFAQ, BetterDocs for Shopify, EasyFlow and TrustSync.</span><span class="co-go" aria-hidden="true">→</span></a></li>
     </ul>
   </section>
 
@@ -281,7 +286,7 @@ a.primary:hover{color:var(--signal)}
       </div>
       <div>
         <span class="lab">Elsewhere</span>
-        <div class="c-links"><a href="https://github.com/tulonaa">GitHub</a></div>
+        <div class="c-links"><a href="https://github.com/tulonaa">GitHub</a><a href="https://www.linkedin.com/in/soniasultanatulona/">LinkedIn</a></div>
       </div>
       <div>
         <span class="lab">Company</span>
