@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sonia Sultana Tulona, Communications Executive at WPDeveloper and Storeware. Outreach, partnerships and campaigns.">
+<meta property="og:title" content="Sonia Sultana Tulona">
+<meta property="og:description" content="Communications Executive at WPDeveloper and Storeware. Outreach, partnerships and campaigns.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0a0b">
+<title>Sonia Sultana Tulona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky header, 12-col editorial grid, hairline rules, one red signal accent. Same palette as rupok.me. */
+:root{
+  --bg:#fff; --ink:#0d0d0e; --ink-2:#55565b; --ink-3:#6d6e73; --line:#e8e8e9; --soft:#f4f4f3; --signal:#d2321e;
+  --display:"Host Grotesk","Helvetica Neue",Arial,sans-serif;
+  --serif:"Newsreader","Iowan Old Style",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --frame:1200px; --gap:24px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0a0b;--ink:#f2f0ec;--ink-2:#a9a7a2;--ink-3:#96948f;--line:#29292c;--soft:#141416;--signal:#ff7968;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a0a0b;--ink:#f2f0ec;--ink-2:#a9a7a2;--ink-3:#96948f;--line:#29292c;--soft:#141416;--signal:#ff7968;color-scheme:dark}
+
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--display);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,p,ul,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.frame{max-width:var(--frame);margin-inline:auto;min-width:0}
+.dim{color:var(--ink-3)}
+.skip{position:absolute;top:-48px;left:12px;z-index:50;background:var(--ink);color:var(--bg);border-radius:999px;padding:10px 14px;font-size:14px}
+.skip:focus{top:12px}
+
+/* header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.head-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px;padding-block:16px}
+.wordmark{display:inline-flex;align-items:center;gap:12px}
+.mark{flex:none;width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:600 20px/1 var(--display);letter-spacing:-.04em}
+.wordmark small{display:block;font:400 12px/1.25 var(--display);letter-spacing:.015em;color:var(--ink-2)}
+.wordmark b{display:block;font:600 23px/1.05 var(--display);letter-spacing:-.04em}
+.dot{color:var(--signal)}
+.nav{display:flex;justify-content:flex-end;gap:28px;font:500 14px/1 var(--display)}
+.nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;color:var(--ink-2)}
+.nav a:after{content:"";position:absolute;inset:auto 0 3px;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:0;transition:transform .18s}
+.nav a:hover{color:var(--ink)}
+.nav a:hover:after{transform:scaleX(1)}
+.head-end{display:flex;align-items:center;gap:18px}
+.theme{position:relative;display:inline-flex;align-items:center}
+.theme svg{position:absolute;left:9px;width:16px;height:16px;pointer-events:none}
+.theme select{min-height:44px;padding:0 6px 0 31px;background:var(--bg);color:var(--ink);font:500 12px/1 var(--display);border:1px solid transparent;border-radius:4px;cursor:pointer}
+.theme select:hover{border-color:var(--line);background:var(--soft)}
+.hello{display:inline-flex;align-items:center;min-height:42px;padding:0 17px;border:1px solid var(--line);border-radius:4px;font:500 13px/1 var(--display);white-space:nowrap}
+.hello:hover{border-color:var(--ink)}
+
+/* shared bits */
+.pill{display:inline-flex;align-items:center;gap:14px;padding:6px 6px 6px 20px;border:1px solid var(--ink);border-radius:999px;font:500 15px/1 var(--display);white-space:nowrap;color:var(--ink);background:transparent;cursor:pointer;transition:background-color .2s,color .2s}
+.pill .arw{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:14px;transition:transform .2s,background-color .2s,color .2s}
+.pill:hover{background:var(--ink);color:var(--bg)}
+.pill:hover .arw{background:var(--bg);color:var(--ink);transform:rotate(45deg)}
+.textlink{font:500 14px/1 var(--display);white-space:nowrap}
+.textlink:hover{color:var(--signal)}
+.kicker-mono{display:flex;align-items:center;gap:9px;font:400 12px/1.5 var(--mono);color:var(--ink-2)}
+.rule{flex:none;width:16px;height:1px;background:var(--signal)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);padding-block:56px 48px}
+.hero .kicker-mono{grid-column:1/span 8}
+.statement{grid-column:1/span 8;margin-top:26px;font:500 clamp(40px,5.2vw,74px)/1.04 var(--display);letter-spacing:-.055em;text-wrap:balance}
+.portrait{grid-column:10/-1;grid-row:1/span 2;align-self:start}
+.portrait .plate{display:block;aspect-ratio:4/5;width:100%;max-width:100%;height:auto;object-fit:cover;object-position:50% 30%;background:var(--soft);filter:grayscale(1) contrast(1.05)}
+.portrait figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font:400 10px/1.5 var(--mono);color:var(--ink-3)}
+.hero-foot{grid-column:1/span 7;display:flex;flex-direction:column;gap:25px;padding-top:28px}
+.bio{max-width:30em;font-size:17px;line-height:1.65;color:var(--ink-2)}
+.bio a{color:var(--ink);text-decoration:underline;text-underline-offset:.18em;text-decoration-color:var(--line)}
+.bio a:hover{text-decoration-color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+
+/* capability strip */
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.cell{padding:26px 20px}
+.cell:first-child{padding-left:0}
+.cell+.cell{border-left:1px solid var(--line)}
+.cell b{display:block;font:300 clamp(28px,3.1vw,42px)/1 var(--display);letter-spacing:-.03em}
+.cell span{display:block;margin-top:10px;font-size:14px;color:var(--ink-2)}
+
+/* sections */
+.section{padding-top:88px}
+.sec-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:end;padding-bottom:28px;border-bottom:1px solid var(--ink)}
+.sec-head h2{grid-column:1/span 8;font:500 clamp(30px,3.2vw,42px)/1.02 var(--display);letter-spacing:-.035em;text-wrap:balance}
+.sec-head .side{grid-column:9/-1;justify-self:end;text-align:right;font-size:14px;color:var(--ink-2)}
+.rows .row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line)}
+.row .tag{grid-column:1/span 3;font:400 14px/1.4 var(--mono);color:var(--ink-3)}
+.row .name{grid-column:4/span 4;font:500 clamp(24px,2.5vw,34px)/1.08 var(--display);letter-spacing:-.03em;transition:transform .25s}
+.row .what{grid-column:8/span 4;font-size:16px;line-height:1.5;color:var(--ink-2)}
+.row .go{grid-column:12;justify-self:end;color:var(--ink-3);transition:transform .2s,color .2s}
+a.row:hover .name{transform:translateX(8px)}
+a.row:hover .go{color:var(--signal);transform:rotate(45deg)}
+.note{padding-top:22px;font-size:15px;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding-top:32px}
+.chips li{padding:9px 13px;border:1px solid var(--ink);border-radius:999px;font:400 14px/1 var(--mono)}
+
+/* about */
+.about{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);row-gap:26px;padding-top:88px}
+.about h2{grid-column:1/-1;font:500 clamp(32px,3.8vw,48px)/1.04 var(--display);letter-spacing:-.04em;text-wrap:balance}
+.about .lede{grid-column:1/span 6;font:400 21px/1.5 var(--serif);color:var(--ink-2)}
+.about .aside{grid-column:9/-1;align-self:end;font-size:15px;line-height:1.6;color:var(--ink-2)}
+
+/* contact */
+.contact{margin-top:96px;padding-top:48px;border-top:1px solid var(--ink)}
+.say{margin-top:18px;font:500 clamp(40px,6.4vw,84px)/.92 var(--display);letter-spacing:-.055em;text-wrap:balance}
+.c-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px;padding-block:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.c-row .lab{display:block;margin-bottom:8px;font-size:13px;color:var(--ink-3)}
+.c-row .primary{display:block;font-size:19px;font-weight:500;overflow-wrap:anywhere;user-select:all}
+.copy{margin-top:12px;padding:8px 14px;border:1px solid var(--line);border-radius:4px;background:transparent;color:var(--ink);font:500 13px/1 var(--display);cursor:pointer}
+.copy:hover{border-color:var(--ink)}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding-block:24px 48px;font-size:13px;color:var(--ink-3)}
+
+@media (max-width:1000px){
+  .head-row,.nav{gap:20px}
+  .hello{display:none}
+  .hero .kicker-mono,.statement{grid-column:1/span 9}
+  .portrait{grid-column:10/-1}
+  .hero-foot{grid-column:1/-1}
+  .row .name{grid-column:4/span 5}
+  .row .what{grid-column:4/span 8;grid-row:2;margin-top:8px}
+  .row .go{grid-row:1}
+}
+@media (max-width:680px){
+  html{scroll-padding-top:134px}
+  .head-row{grid-template-columns:1fr auto;gap:8px;padding-block:12px 0}
+  .mark{width:34px;height:34px;font-size:17px}
+  .wordmark b{font-size:21px}
+  .nav{grid-area:2/1/auto/-1;justify-content:space-between;gap:12px;border-top:1px solid var(--line)}
+  .nav a{font-size:13px}
+  .nav a:after{bottom:0}
+  .hero{grid-template-columns:minmax(0,1fr) 120px;column-gap:18px;padding-block:28px 32px}
+  .hero .kicker-mono{grid-column:1;grid-row:1;align-self:center;font-size:11px}
+  .portrait{grid-column:2;grid-row:1}
+  .portrait figcaption{display:none}
+  .statement{grid-column:1/-1;grid-row:2;font-size:clamp(32px,8.4vw,48px);letter-spacing:-.045em}
+  .hero-foot{grid-row:3;padding-top:22px;gap:22px}
+  .bio{font-size:16px}
+  .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cell{padding:22px 12px}
+  .cell:nth-child(3){padding-left:0;border-left:0}
+  .cell:nth-child(n+3){border-top:1px solid var(--line)}
+  .section,.about{padding-top:56px}
+  .sec-head h2,.sec-head .side,.about .lede,.about .aside{grid-column:1/-1}
+  .sec-head .side{justify-self:start;text-align:left;margin-top:12px}
+  .rows .row{row-gap:6px}
+  .row .tag,.row .name,.row .what{grid-column:1/-1;grid-row:auto}
+  .row .go{display:none}
+  .row .what{margin-top:0}
+  .contact{margin-top:64px;padding-top:32px}
+  .c-row{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head gut">
+  <div class="frame head-row">
+    <a class="wordmark" href="#top" aria-label="Sonia Sultana Tulona, home">
+      <span class="mark" aria-hidden="true">T</span>
+      <span><small>Sonia Sultana</small><b>Tulona<span class="dot">.</span></b></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="head-end">
+      <a class="hello" href="#contact">Let’s talk</a>
+      <label class="theme">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 2a6 6 0 0 0 0 12z" fill="currentColor"/></svg>
+        <span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Color theme</span>
+        <select id="theme-select"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select>
+      </label>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<div id="top" class="gut">
+  <div class="frame">
+    <section class="hero">
+      <p class="kicker-mono"><span class="rule"></span>Communications Executive, WPDeveloper &amp; Storeware</p>
+      <h1 class="statement">I get good products in front of the right people.</h1>
+      <figure class="portrait">
+        <img class="plate" src="portrait.jpg" width="900" height="1125" alt="Portrait of Sonia Sultana Tulona" fetchpriority="high">
+        <figcaption><span>Sonia Sultana Tulona</span><span>Communications</span></figcaption>
+      </figure>
+      <div class="hero-foot">
+        <p class="bio">I’m Tulona. I run outreach, partnerships and campaigns for the <a href="https://wpdeveloper.com">WPDeveloper</a> and Storeware product lines, from the first email to the live placement.</p>
+        <div class="cta">
+          <a class="pill" href="#work">See my work <span class="arw" aria-hidden="true">↗</span></a>
+          <a class="textlink" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="cell"><b>Outreach</b><span>External email, creators and publishers</span></div>
+      <div class="cell"><b>Partnerships</b><span>Reciprocal deals and client success</span></div>
+      <div class="cell"><b>Campaigns</b><span>Launches, promo kits and resources</span></div>
+      <div class="cell"><b>Design</b><span>Banners and campaign visuals</span></div>
+    </div>
+  </div>
+</div>
+
+<div id="work" class="section gut">
+  <div class="frame">
+    <div class="sec-head">
+      <h2>Campaigns and partnerships.</h2>
+      <p class="side">A selection of recent work</p>
+    </div>
+    <ul class="rows">
+      <li><a class="row" href="https://xspeedcache.com"><span class="tag">Launch</span><span class="name">xSpeed Cache</span><span class="what">Launch outreach and an affiliate campaign across creators and publishers.</span><span class="go" aria-hidden="true">↗</span></a></li>
+      <li><a class="row" href="https://bettershield.ai"><span class="tag">Launch</span><span class="name">BetterShield</span><span class="what">Coverage and promotion planning for WPDeveloper’s WordPress security plugin.</span><span class="go" aria-hidden="true">↗</span></a></li>
+      <li><a class="row" href="https://thinkrank.ai"><span class="tag">Campaign</span><span class="name">ThinkRank</span><span class="what">Outreach for the AI-powered SEO plugin, including sponsored coverage.</span><span class="go" aria-hidden="true">↗</span></a></li>
+      <li><a class="row" href="https://storeseo.com"><span class="tag">Partnership</span><span class="name">Storeware apps</span><span class="what">Cross-promotion with other Shopify app makers for StoreSEO and StoreFAQ.</span><span class="go" aria-hidden="true">↗</span></a></li>
+      <li><div class="row"><span class="tag">Link building</span><span class="name">Listicle inclusions</span><span class="what">Product entries written to match each blog’s own format, plus reciprocal link exchange.</span></div></li>
+      <li><div class="row"><span class="tag">Content</span><span class="name">Review blogs</span><span class="what">Hands-on review posts that present WPDeveloper products to a partner site’s readers.</span></div></li>
+    </ul>
+    <p class="note">The full list of live placements lives in the team tracker.</p>
+  </div>
+</div>
+
+<div id="products" class="section gut">
+  <div class="frame">
+    <div class="sec-head">
+      <h2>Products I work across.</h2>
+      <p class="side">WPDeveloper and Storeware</p>
+    </div>
+    <ul class="chips">
+      <li>Essential Addons</li><li>Essential Blocks</li><li>BetterDocs</li><li>Templately</li>
+      <li>NotificationX</li><li>BetterLinks</li><li>xSpeed Cache</li><li>ThinkRank</li>
+      <li>BetterShield</li><li>StoreSEO</li><li>StoreFAQ</li>
+    </ul>
+  </div>
+</div>
+
+<div id="about" class="gut">
+  <div class="frame about">
+    <h2>The conversations around the product matter as much as the product.</h2>
+    <p class="lede">I handle who we write to, what we offer them, and how a partnership gets agreed, for every product in the portfolio.</p>
+    <p class="aside">Day to day that means outreach and email, campaigns, review blogs, listicle inclusions, backlink exchanges, promo kits and banner design.</p>
+  </div>
+</div>
+
+<div id="contact" class="gut">
+  <div class="frame contact">
+    <p class="kicker-mono"><span class="rule"></span>Contact</p>
+    <h2 class="say">Good things start with a conversation.</h2>
+    <div class="c-row">
+      <div>
+        <span class="lab">Email</span>
+        <span class="primary" id="mail">tulona@wpdeveloper.com</span>
+        <button class="copy" id="copy" type="button">Copy address</button>
+      </div>
+      <div>
+        <span class="lab">Role</span>
+        <span class="primary">Communications Executive</span>
+      </div>
+      <div>
+        <span class="lab">Company</span>
+        <span class="primary"><a href="https://wpdeveloper.com" style="text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:.2em">wpdeveloper.com</a></span>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 Sonia Sultana Tulona</span><span class="dim">Communications, WPDeveloper &amp; Storeware</span></div>
+  </div>
+</div>
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement, sel=document.getElementById('theme-select');
+  function apply(v){ if(v==='light'||v==='dark'){root.setAttribute('data-theme',v)}else{root.removeAttribute('data-theme')} }
+  try{var s=localStorage.getItem('tulona-theme'); if(s){sel.value=s; apply(s)}}catch(e){}
+  sel.addEventListener('change',function(){apply(sel.value); try{localStorage.setItem('tulona-theme',sel.value)}catch(e){}});
+  var btn=document.getElementById('copy'), mail=document.getElementById('mail');
+  btn.addEventListener('click',function(){
+    function done(){btn.textContent='Copied'; setTimeout(function(){btn.textContent='Copy address'},1800)}
+    function fallback(){var r=document.createRange(); r.selectNodeContents(mail); var g=window.getSelection(); g.removeAllRanges(); g.addRange(r); btn.textContent='Selected, press copy'}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(mail.textContent.trim()).then(done,fallback)}else{fallback()}
+  });
+})();
+</script>
+</body>
+</html>
