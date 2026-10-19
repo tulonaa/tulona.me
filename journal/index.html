@@ -230,6 +230,17 @@ a.banner:hover svg{transform:translateY(-4px) rotate(-1.5deg)}
 .post .banner{margin-top:34px}
 @media (width<=1000px){.jh .feature,.jh .list{grid-column:1/-1}}
 @media (width<=680px){.banner .bt{max-width:70%}}
+/* journal list */
+.jfeat{padding-top:44px}
+.jfeat .banner{aspect-ratio:21/9}
+.jfeat .banner .bt{max-width:55%}
+.jyear{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);padding-top:56px}
+.jyear .y{grid-column:1/span 2;align-self:start;background:var(--soft);padding:18px 16px;text-align:right;font:300 24px/1 var(--display);letter-spacing:-.02em;margin-left:calc(var(--pad)*-1);padding-left:var(--pad)}
+.jyear ul{grid-column:3/-1}
+.jyear li a{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);font:500 clamp(16px,1.5vw,19px)/1.35 var(--display);letter-spacing:-.015em}
+.jyear li a:hover .t{color:var(--signal)}
+.jyear .d{font:500 14px/1.7 var(--display);color:var(--ink-3);text-transform:uppercase;letter-spacing:.02em}
+@media (width<=680px){.jyear .y{grid-column:1/-1;margin:0 0 14px;text-align:left;padding:12px 14px}.jyear ul{grid-column:1/-1}.jyear li a{grid-template-columns:76px 1fr;gap:10px}.jfeat .banner{aspect-ratio:16/10}.jfeat .banner .bt{max-width:70%}}
 </style>
 </head>
 <body>
@@ -261,13 +272,15 @@ a.banner:hover svg{transform:translateY(-4px) rotate(-1.5deg)}
 
 <main id="main" class="frame">
   <section class="pagehead">
-    <h1>Journal</h1>
+    <h1>Published notes</h1>
     <p>Notes on outreach, partnerships and the emails in between.</p>
   </section>
-  <section class="jlist">
-    <ul class="cos jr">
-      <li><a class="co" href="emails-people-reply-to/"><span class="co-year">19 Oct 2026</span><span class="co-name">Emails people actually reply to</span><span class="co-what">What I work out before I write a single line of an outreach email.</span><span class="co-reach">Outreach</span><span class="co-go" aria-hidden="true">→</span></a></li>
-      <li><a class="co" href="just-following-up/"><span class="co-year">12 Oct 2026</span><span class="co-name">Turning “just following up” into a deal</span><span class="co-what">Why a follow-up needs something new in it, and how a “sounds interesting” becomes a plan.</span><span class="co-reach">Partnerships</span><span class="co-go" aria-hidden="true">→</span></a></li>
+  <section class="jfeat"><a class="banner" href="emails-people-reply-to/"><span class="bt">Emails people actually reply to.</span><svg viewBox="0 0 200 150" fill="none" aria-hidden="true"><rect x="14" y="30" width="172" height="110" rx="8" fill="#f7efe4"/><path d="M14 40l86 58 86-58" stroke="#a42915" stroke-width="5" stroke-linejoin="round"/><circle cx="160" cy="34" r="26" fill="#f0c35a"/><path d="M148 34l9 9 16-18" stroke="#a42915" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bm">Tulona<i>.</i></span></a></section>
+  <section class="jyear">
+    <h2 class="y">2026</h2>
+    <ul>
+      <li><a href="emails-people-reply-to/"><span class="d">Oct 19</span><span class="t">Emails people actually reply to</span></a></li>
+      <li><a href="just-following-up/"><span class="d">Oct 12</span><span class="t">Turning “just following up” into a deal</span></a></li>
     </ul>
   </section>
 
