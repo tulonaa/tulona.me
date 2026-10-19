@@ -223,26 +223,33 @@ a.primary:hover{color:var(--signal)}
 @media (width<=680px){.dense .co-what.wide{grid-column:1/-1}}
 
 /* brand cards */
-.bc{padding-top:56px}
-.bc-head{border-bottom:1px solid var(--ink);padding-bottom:26px}
-.bc-head h1{font:500 clamp(34px,4vw,52px)/1.02 var(--display);letter-spacing:-.04em}
-.bc-head p{font:400 16px/1.6 var(--display);color:var(--ink-2);max-width:34em;margin-top:14px}
-.bcard{border-bottom:1px solid var(--line);padding:30px 0;column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));row-gap:12px;display:grid}
+.bc{padding-top:48px}
+.bc-head{border-bottom:1px solid var(--ink);padding-bottom:22px}
+.bc-head h1{font:500 clamp(28px,3vw,38px)/1.05 var(--display);letter-spacing:-.035em}
+.bc-head p{font:400 15px/1.6 var(--display);color:var(--ink-2);max-width:32em;margin-top:12px}
+.bcard{border-bottom:1px solid var(--line);padding:26px 0 30px;column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));row-gap:12px;display:grid}
 .bcard .l{grid-column:1/span 4}
-.bcard .l .ix{font:400 12px/1.4 var(--mono);color:var(--ink-3)}
-.bcard .l h2{font:500 clamp(30px,3.2vw,44px)/1.05 var(--display);letter-spacing:-.04em;margin-top:10px}
+.bcard .ix{font:400 11px/1.4 var(--mono);color:var(--ink-3);display:flex;gap:12px}
+.bcard .l h2{font:500 clamp(30px,3.4vw,46px)/1.02 var(--display);letter-spacing:-.045em;margin-top:12px}
 .bcard .l h2 a:hover{color:var(--signal)}
-.bcard .l .cat{color:var(--ink-3);font-size:14px;margin-top:8px}
+.bcard .l h2 i{font:400 .38em/1 var(--display);font-style:normal;color:var(--ink-3);margin-left:.15em;vertical-align:.45em}
+.bcard .cat{color:var(--ink-3);font-size:13px;margin-top:10px}
 .bcard .m{grid-column:5/span 5}
-.bcard .m .lead{font:400 19px/1.45 var(--serif);color:var(--ink-2)}
-.bcard .m ul{margin-top:18px}
-.bcard .m li{padding:9px 0;border-top:1px solid var(--line);font-size:14px;color:var(--ink-3);line-height:1.5}
-.bcard .m li b{display:block;font-weight:500;color:var(--ink);font-size:14px}
-.bcard .m li a.n{border-bottom:1px solid var(--line)}
-.bcard .m li a.n:hover{color:var(--signal);border-color:var(--signal)}
+.bcard .lead{font:400 18px/1.45 var(--serif);color:var(--ink-2)}
+.bcard .m ul{margin-top:16px}
+.bcard .m li{padding:0;margin-bottom:12px}
+.bcard .m li a,.bcard .m li div{display:grid;grid-template-columns:1fr auto;column-gap:12px}
+.bcard .m li b{grid-area:1/1;font-weight:500;font-size:13px;color:var(--ink);justify-self:start;border-bottom:1px solid var(--line);line-height:1.4}
+.bcard .m li a:hover b{color:var(--signal);border-color:var(--signal)}
+.bcard .m li em{grid-area:1/2;font-style:normal;color:var(--ink-3);font-size:12px}
+.bcard .m li span{grid-area:2/1/auto/-1;color:var(--ink-3);font-size:12px;line-height:1.5;margin-top:3px}
+.bcard .more{font-size:12px;color:var(--ink-3);line-height:1.6;margin-top:6px;border-top:1px solid var(--line);padding-top:10px}
 .bcard .r{grid-column:10/-1}
-.bcard .r b{font:300 clamp(34px,4vw,54px)/1 var(--display);letter-spacing:-.03em;display:block}
-.bcard .r span{color:var(--ink-2);font-size:13px;display:block;margin-top:8px}
+.bcard .r b{font:300 clamp(38px,4.2vw,58px)/1 var(--display);letter-spacing:-.03em;display:block}
+.bcard .r span{color:var(--ink-2);font-size:12px;display:block;margin-top:8px}
+.bc-foot{color:var(--ink-3);font-size:12px;padding:20px 0 4px}
+.bc-foot a{color:var(--ink);font-weight:500}
+.bc-foot a:hover{color:var(--signal)}
 @media (width<=1000px){.bcard .l,.bcard .m,.bcard .r{grid-column:1/-1}}
 </style>
 </head>
@@ -274,17 +281,18 @@ a.primary:hover{color:var(--signal)}
 
 <main id="main" class="frame">
   <section id="products" class="bc">
-    <div class="bc-head"><h1>Brands I work across.</h1><p>Two product lines, one outreach and partnerships desk. These are the products I take to creators, publishers and partner brands.</p></div>
+    <div class="bc-head"><h1>Brands I work across.</h1><p>Alongside my partnerships and outreach work, these are the two product lines I take to creators, publishers and partner brands.</p></div>
     <article class="bcard">
-      <div class="l"><p class="ix">01 · WordPress</p><h2><a href="https://wpdeveloper.com">WPDeveloper <span aria-hidden="true">→</span></a></h2><p class="cat">WordPress products</p></div>
-      <div class="m"><p class="lead">Plugins that help WordPress sites get discovered, load faster, stay secure and look better.</p><ul><li><b><a class="n" href="https://xspeedcache.com">xSpeed Cache</a></b>Caching and performance optimization for WordPress.</li><li><b><a class="n" href="https://thinkrank.ai">ThinkRank</a></b>AI-powered SEO for WordPress.</li><li><b><a class="n" href="https://bettershield.ai">BetterShield</a></b>Security audits, login protection and fixes you can undo.</li><li><b>Essential Addons</b>Widgets and extensions for Elementor.</li><li><b>Essential Blocks</b>Page-building blocks for the WordPress block editor.</li><li><b>BetterDocs</b>A searchable knowledge base for your site.</li><li><b>Templately</b>Ready-made templates and cloud for WordPress.</li><li><b>EmbedPress</b>Embed videos, documents and social content.</li><li><b>NotificationX</b>Social proof and notification bars.</li><li><b>BetterLinks</b>Link shortening, tracking and redirects.</li><li><b>Disable Comments</b>Turn off comments site-wide in one click.</li></ul></div>
+      <div class="l"><p class="ix"><span>01</span><span>Since 2025</span></p><h2><a href="https://wpdeveloper.com">WPDeveloper<i aria-hidden="true">→</i></a></h2><p class="cat">WordPress products</p></div>
+      <div class="m"><p class="lead">Tools that help WordPress sites get discovered, load faster and stay secure.</p><ul><li><a href="https://thinkrank.ai"><b>ThinkRank</b><em aria-hidden="true">→</em><span>AI-powered SEO for WordPress.</span></a></li><li><a href="https://xspeedcache.com"><b>xSpeed Cache</b><em aria-hidden="true">→</em><span>Caching and performance optimization for WordPress.</span></a></li><li><a href="https://bettershield.ai"><b>BetterShield</b><em aria-hidden="true">→</em><span>Security audits, login protection and fixes you can undo.</span></a></li></ul><p class="more">And Essential Addons, Essential Blocks, BetterDocs, Templately, EmbedPress, NotificationX, BetterLinks, Disable Comments and more.</p></div>
       <div class="r"><b>11+</b><span>products I work across</span></div>
     </article>
     <article class="bcard">
-      <div class="l"><p class="ix">02 · Shopify</p><h2><a href="https://storeware.io">Storeware <span aria-hidden="true">→</span></a></h2><p class="cat">Shopify apps</p></div>
-      <div class="m"><p class="lead">Shopify apps that help merchants make their products easier to find, answer customer questions and run their stores.</p><ul><li><b><a class="n" href="https://storeware.io">StoreSEO</a></b>SEO and image optimization for Shopify stores.</li><li><b><a class="n" href="https://storeware.io">StoreFAQ</a></b>Useful answers, right on the product page.</li><li><b><a class="n" href="https://storeware.io">BetterDocs for Shopify</a></b>A searchable knowledge base for Shopify customers.</li><li><b><a class="n" href="https://storeware.io">EasyFlow</a></b>Automation for Shopify stores.</li><li><b><a class="n" href="https://storeware.io">TrustSync</a></b>Reviews and trust signals for Shopify stores.</li></ul></div>
-      <div class="r"><b>5</b><span>apps I work across</span></div>
+      <div class="l"><p class="ix"><span>02</span><span>Since 2025</span></p><h2><a href="https://storeware.io">Storeware<i aria-hidden="true">→</i></a></h2><p class="cat">Shopify apps</p></div>
+      <div class="m"><p class="lead">Shopify apps that help merchants make their products easier to find, answer customer questions and run their stores.</p><ul><li><a href="https://storeware.io"><b>StoreSEO</b><em aria-hidden="true">→</em><span>SEO and image optimization for Shopify stores.</span></a></li><li><a href="https://storeware.io"><b>BetterDocs for Shopify</b><em aria-hidden="true">→</em><span>A searchable knowledge base for Shopify customers.</span></a></li><li><a href="https://storeware.io"><b>StoreFAQ</b><em aria-hidden="true">→</em><span>Useful answers, right on the product page.</span></a></li></ul><p class="more">And EasyFlow, TrustSync and more.</p></div>
+      <div class="r"><b>5+</b><span>apps I work across</span></div>
     </article>
+    <p class="bc-foot">Explore the brands at <a href="https://wpdeveloper.com">WPDeveloper</a> and <a href="https://storeware.io">Storeware</a> &rarr;</p>
   </section>
 
   <section class="section" style="padding-top:8px">
