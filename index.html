@@ -190,6 +190,9 @@ a.primary:hover{color:var(--signal)}
 @media (prefers-reduced-motion:reduce){*,:before,:after{transition:none!important;animation:none!important}}
 
 
+.aside .w{transition:color .18s}
+.aside .w.on{color:var(--signal)}
+.aside .w.done{color:var(--ink)}
 /* journal */
 .pagehead{padding-block:64px 8px}
 .pagehead h1{font:500 clamp(48px,7vw,96px)/.95 var(--display);letter-spacing:-.055em}
@@ -344,6 +347,28 @@ a.primary:hover{color:var(--signal)}
     void w[i].offsetWidth;
     w[i].classList.add('on');
   },2600);
+})();
+(function(){
+  var p=document.querySelector('.about .aside'); if(!p)return;
+  var txt=p.textContent.trim().replace(/\s+/g,' ');
+  p.setAttribute('aria-label',txt);
+  p.innerHTML=txt.split(' ').map(function(w){return '<span class="w" aria-hidden="true">'+w+'</span>'}).join(' ');
+  var w=p.querySelectorAll('.w');
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver' in window))return;
+  var i=-1,timer=null,vis=false;
+  function clear(){for(var k=0;k<w.length;k++){w[k].classList.remove('on','done')}}
+  function tick(){
+    if(i>=0){w[i].classList.remove('on');w[i].classList.add('done')}
+    i++;
+    if(i>=w.length){timer=setTimeout(function(){clear();i=-1;timer=setTimeout(tick,500)},1800);return}
+    w[i].classList.add('on');
+    var t=w[i].textContent,d=/[.,?]$/.test(t)?520:(t.length>7?260:200);
+    timer=setTimeout(tick,d);
+  }
+  new IntersectionObserver(function(e){
+    vis=e[0].isIntersecting;
+    if(vis&&!timer){tick()}else if(!vis&&timer){clearTimeout(timer);timer=null}
+  },{threshold:.4}).observe(p);
 })();
 </script>
 </body>
