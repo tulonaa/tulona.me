@@ -303,6 +303,13 @@ a.copy{display:inline-block;margin-top:14px;text-decoration:none}
 .jyear .th .arc{fill:none;stroke:var(--signal);stroke-width:4;stroke-linecap:round}
 .jyear .th .node{fill:var(--signal)}
 @media (width<=680px){.jyear li a{grid-template-columns:64px 88px 1fr !important;gap:10px}}
+/* header photo v2: coin flip */
+.wordmark::before{display:none}
+.brand-mark{animation:bm-flip 5s ease-in-out infinite;box-shadow:none;backface-visibility:visible}
+.wordmark:hover .brand-mark{animation:bm-jump .55s cubic-bezier(.3,1.6,.5,1)}
+@keyframes bm-flip{0%,72%,100%{transform:perspective(220px) rotateY(0)}86%{transform:perspective(220px) rotateY(180deg) scale(1.08)}99%{transform:perspective(220px) rotateY(360deg)}}
+@keyframes bm-jump{0%{transform:translateY(0) scale(1,1)}30%{transform:translateY(-7px) scale(.92,1.1)}60%{transform:translateY(0) scale(1.12,.88)}100%{transform:translateY(0) scale(1,1)}}
+@media (prefers-reduced-motion:reduce){.brand-mark,.wordmark:hover .brand-mark{animation:none}}
 </style>
 </head>
 <body>
