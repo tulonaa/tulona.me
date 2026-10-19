@@ -209,6 +209,27 @@ a.primary:hover{color:var(--signal)}
 .post .close{border-top:1px solid var(--line);margin-top:44px;padding-top:22px;font:400 19px/1.5 var(--serif);color:var(--ink)}
 @media (width<=1000px){.jr .co-name,.jr .co-what{grid-column:7/-1}.jr .co-go{display:none}}
 @media (width<=680px){.jr .co-name,.jr .co-what{grid-column:1/-1}}
+/* journal banner */
+.banner{position:relative;display:block;overflow:hidden;aspect-ratio:16/10;background:#a42915;color:#f7efe4;padding:7% 7% 6%;border-radius:2px}
+.banner .bt{display:block;position:relative;z-index:1;max-width:62%;font:600 clamp(26px,3.5vw,50px)/1 var(--display);letter-spacing:-.05em}
+.banner svg{position:absolute;right:5%;bottom:9%;width:38%;height:auto}
+.banner .bm{position:absolute;left:7%;bottom:6%;font:600 clamp(12px,1.1vw,15px)/1 var(--display);letter-spacing:-.02em;opacity:.9}
+.banner .bm i{font-style:normal;color:#f0c35a}
+a.banner:hover svg{transform:translateY(-4px) rotate(-1.5deg)}
+.banner svg{transition:transform .3s}
+.jh{column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));padding-top:36px;display:grid;row-gap:28px}
+.jh .feature{grid-column:1/span 7}
+.jh .feature .cap{margin-top:14px;font:400 12px/1.4 var(--mono);color:var(--ink-3)}
+.jh .list{grid-column:9/-1}
+.jh .it{display:block;padding:0 0 26px;margin-bottom:26px;border-bottom:1px solid var(--line)}
+.jh .it:last-child{border-bottom:0;margin-bottom:0}
+.jh .it .m{font:400 12px/1.4 var(--mono);color:var(--ink-3)}
+.jh .it h3{font:500 clamp(22px,2vw,28px)/1.15 var(--display);letter-spacing:-.03em;margin-top:12px;transition:color .2s}
+.jh .it p{color:var(--ink-2);font-size:15px;line-height:1.6;margin-top:10px}
+.jh .it:hover h3{color:var(--signal)}
+.post .banner{margin-top:34px}
+@media (width<=1000px){.jh .feature,.jh .list{grid-column:1/-1}}
+@media (width<=680px){.banner .bt{max-width:70%}}
 </style>
 </head>
 <body>
@@ -244,6 +265,7 @@ a.primary:hover{color:var(--signal)}
     <p class="meta">19 Oct 2026 · Outreach</p>
     <h1>Emails people actually reply to</h1>
     <p class="lead">Most outreach emails fail before the first full stop. Not because the product is bad, but because the email is about us.</p>
+    <div class="banner"><span class="bt">Emails people actually reply to.</span><svg viewBox="0 0 200 150" fill="none" aria-hidden="true"><rect x="14" y="30" width="172" height="110" rx="8" fill="#f7efe4"/><path d="M14 40l86 58 86-58" stroke="#a42915" stroke-width="5" stroke-linejoin="round"/><circle cx="160" cy="34" r="26" fill="#f0c35a"/><path d="M148 34l9 9 16-18" stroke="#a42915" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bm">Tulona<i>.</i></span></div>
     <h2>Start with who, not what</h2><p>Before I write a word, I decide who the email is for and why them. A blog that already writes roundups needs a different email from a creator who reviews tools on video. If I can’t say in one sentence why I’m writing to this person, I’m not ready to send.</p><h2>Make it about them</h2><p>One specific detail, like an article, a video or a list they published, shows I actually read their work. Then comes the offer, written in terms of what it gives them: a fresh entry for their roundup, a licence to test properly, a story their readers haven’t seen yet.</p><h2>One ask, not three</h2><p>“Would you be open to a quick look?” beats a paragraph of options. The easier the next step is to take, the more likely it gets taken.</p><h2>Short enough for a phone</h2><p>If it needs scrolling, it needs cutting. Most first emails are read in a few seconds between other things, so the point has to be visible straight away.</p><h2>Then let it breathe</h2><p>A reply doesn’t always come to the first email. That’s what the follow-up is for, and it deserves as much care as the first one. More on that in <a href="../just-following-up/">Turning “just following up” into a deal</a>.</p>
     <p class="close">Replying to emails really is a very good idea. My job is to make it the easiest thing in their inbox.</p>
   </article>

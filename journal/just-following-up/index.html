@@ -209,6 +209,27 @@ a.primary:hover{color:var(--signal)}
 .post .close{border-top:1px solid var(--line);margin-top:44px;padding-top:22px;font:400 19px/1.5 var(--serif);color:var(--ink)}
 @media (width<=1000px){.jr .co-name,.jr .co-what{grid-column:7/-1}.jr .co-go{display:none}}
 @media (width<=680px){.jr .co-name,.jr .co-what{grid-column:1/-1}}
+/* journal banner */
+.banner{position:relative;display:block;overflow:hidden;aspect-ratio:16/10;background:#a42915;color:#f7efe4;padding:7% 7% 6%;border-radius:2px}
+.banner .bt{display:block;position:relative;z-index:1;max-width:62%;font:600 clamp(26px,3.5vw,50px)/1 var(--display);letter-spacing:-.05em}
+.banner svg{position:absolute;right:5%;bottom:9%;width:38%;height:auto}
+.banner .bm{position:absolute;left:7%;bottom:6%;font:600 clamp(12px,1.1vw,15px)/1 var(--display);letter-spacing:-.02em;opacity:.9}
+.banner .bm i{font-style:normal;color:#f0c35a}
+a.banner:hover svg{transform:translateY(-4px) rotate(-1.5deg)}
+.banner svg{transition:transform .3s}
+.jh{column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));padding-top:36px;display:grid;row-gap:28px}
+.jh .feature{grid-column:1/span 7}
+.jh .feature .cap{margin-top:14px;font:400 12px/1.4 var(--mono);color:var(--ink-3)}
+.jh .list{grid-column:9/-1}
+.jh .it{display:block;padding:0 0 26px;margin-bottom:26px;border-bottom:1px solid var(--line)}
+.jh .it:last-child{border-bottom:0;margin-bottom:0}
+.jh .it .m{font:400 12px/1.4 var(--mono);color:var(--ink-3)}
+.jh .it h3{font:500 clamp(22px,2vw,28px)/1.15 var(--display);letter-spacing:-.03em;margin-top:12px;transition:color .2s}
+.jh .it p{color:var(--ink-2);font-size:15px;line-height:1.6;margin-top:10px}
+.jh .it:hover h3{color:var(--signal)}
+.post .banner{margin-top:34px}
+@media (width<=1000px){.jh .feature,.jh .list{grid-column:1/-1}}
+@media (width<=680px){.banner .bt{max-width:70%}}
 </style>
 </head>
 <body>
@@ -244,6 +265,7 @@ a.primary:hover{color:var(--signal)}
     <p class="meta">12 Oct 2026 · Partnerships</p>
     <h1>Turning “just following up” into a deal</h1>
     <p class="lead">“Just following up” is a polite way of saying nothing. A good follow-up gives the other person a reason to reply.</p>
+    <div class="banner"><span class="bt">“Just following up” becomes a deal.</span><svg viewBox="0 0 200 150" fill="none" aria-hidden="true"><path d="M20 20h110a8 8 0 0 1 8 8v52a8 8 0 0 1-8 8H70l-26 20V88H20a8 8 0 0 1-8-8V28a8 8 0 0 1 8-8z" fill="#f7efe4"/><path d="M70 64h110a8 8 0 0 1 8 8v46a8 8 0 0 1-8 8h-24v20l-26-20H70a8 8 0 0 1-8-8V72a8 8 0 0 1 8-8z" fill="#f0c35a"/><path d="M92 95l14 14 28-30" stroke="#a42915" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bm">Tulona<i>.</i></span></div>
     <h2>Bring something new</h2><p>Every follow-up should carry something the last email didn’t: a fresh angle, a sample, a short answer to the question they’re most likely to ask. If it only repeats the first message, it’s a reminder, not a follow-up.</p><h2>Make the next step tiny</h2><p>“Reply with a yes and I’ll send the draft” is easier to answer than “let me know your thoughts”. Small steps get taken, and big ones sit in the inbox.</p><h2>Turn “sounds interesting” into specifics</h2><p>It can mean yes, or it can mean a polite no. I find out which by getting concrete: who writes it, where it goes, and by when. A real partnership survives those questions.</p><h2>Track it, so nothing goes cold</h2><p>I keep a tracker with each partner’s status, the last touch and the next step. Accounts that go quiet get a nudge before they go cold, instead of after.</p><h2>Know when to stop</h2><p>Two or three thoughtful follow-ups are plenty. After that I leave the door open and move on, which keeps the relationship friendly for next time.</p>
     <p class="close">Keep the partnership moving, keep the tone warm, and keep the inbox somewhat under control.</p>
   </article>

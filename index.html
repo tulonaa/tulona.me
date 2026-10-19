@@ -215,6 +215,27 @@ a.primary:hover{color:var(--signal)}
 .post .close{border-top:1px solid var(--line);margin-top:44px;padding-top:22px;font:400 19px/1.5 var(--serif);color:var(--ink)}
 @media (width<=1000px){.jr .co-name,.jr .co-what{grid-column:7/-1}.jr .co-go{display:none}}
 @media (width<=680px){.jr .co-name,.jr .co-what{grid-column:1/-1}}
+/* journal banner */
+.banner{position:relative;display:block;overflow:hidden;aspect-ratio:16/10;background:#a42915;color:#f7efe4;padding:7% 7% 6%;border-radius:2px}
+.banner .bt{display:block;position:relative;z-index:1;max-width:62%;font:600 clamp(26px,3.5vw,50px)/1 var(--display);letter-spacing:-.05em}
+.banner svg{position:absolute;right:5%;bottom:9%;width:38%;height:auto}
+.banner .bm{position:absolute;left:7%;bottom:6%;font:600 clamp(12px,1.1vw,15px)/1 var(--display);letter-spacing:-.02em;opacity:.9}
+.banner .bm i{font-style:normal;color:#f0c35a}
+a.banner:hover svg{transform:translateY(-4px) rotate(-1.5deg)}
+.banner svg{transition:transform .3s}
+.jh{column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));padding-top:36px;display:grid;row-gap:28px}
+.jh .feature{grid-column:1/span 7}
+.jh .feature .cap{margin-top:14px;font:400 12px/1.4 var(--mono);color:var(--ink-3)}
+.jh .list{grid-column:9/-1}
+.jh .it{display:block;padding:0 0 26px;margin-bottom:26px;border-bottom:1px solid var(--line)}
+.jh .it:last-child{border-bottom:0;margin-bottom:0}
+.jh .it .m{font:400 12px/1.4 var(--mono);color:var(--ink-3)}
+.jh .it h3{font:500 clamp(22px,2vw,28px)/1.15 var(--display);letter-spacing:-.03em;margin-top:12px;transition:color .2s}
+.jh .it p{color:var(--ink-2);font-size:15px;line-height:1.6;margin-top:10px}
+.jh .it:hover h3{color:var(--signal)}
+.post .banner{margin-top:34px}
+@media (width<=1000px){.jh .feature,.jh .list{grid-column:1/-1}}
+@media (width<=680px){.banner .bt{max-width:70%}}
 </style>
 </head>
 <body>
@@ -289,12 +310,16 @@ a.primary:hover{color:var(--signal)}
 
   <section id="journal" class="section">
     <div class="sec-head">
-      <h2>From the journal.</h2>
-      <p class="side"><a href="journal/">All posts →</a></p>
+      <h2>Notes on outreach, partnerships and campaigns.</h2>
+      <p class="side"><a href="journal/">All entries →</a></p>
     </div>
-    <ul class="cos jr">
-      <li><a class="co" href="journal/emails-people-reply-to/"><span class="co-year">19 Oct 2026</span><span class="co-name">Emails people actually reply to</span><span class="co-what">What I work out before I write a single line of an outreach email.</span><span class="co-reach">Outreach</span><span class="co-go" aria-hidden="true">→</span></a></li>
-    </ul>
+    <div class="jh">
+      <div class="feature"><a class="banner" href="journal/emails-people-reply-to/"><span class="bt">Emails people actually reply to.</span><svg viewBox="0 0 200 150" fill="none" aria-hidden="true"><rect x="14" y="30" width="172" height="110" rx="8" fill="#f7efe4"/><path d="M14 40l86 58 86-58" stroke="#a42915" stroke-width="5" stroke-linejoin="round"/><circle cx="160" cy="34" r="26" fill="#f0c35a"/><path d="M148 34l9 9 16-18" stroke="#a42915" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bm">Tulona<i>.</i></span></a></div>
+      <div class="list">
+      <a class="it" href="journal/emails-people-reply-to/"><p class="m">Outreach · 19 Oct 2026</p><h3>Emails people actually reply to</h3><p>What I work out before I write a single line of an outreach email.</p></a>
+      <a class="it" href="journal/just-following-up/"><p class="m">Partnerships · 12 Oct 2026</p><h3>Turning “just following up” into a deal</h3><p>Why a follow-up needs something new in it, and how a “sounds interesting” becomes a plan.</p></a>
+      </div>
+    </div>
   </section>
 
   <section id="contact" class="contact">
