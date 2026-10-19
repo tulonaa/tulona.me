@@ -302,6 +302,22 @@ a.banner:hover svg.ic{transform:translateY(-50%) scale(1.04)}
 .jyear .th svg.ic{width:62%;height:auto;max-height:80%;stroke-width:7}
 .jyear .th svg.ic .ac{stroke:var(--signal)}
 @media (width<=680px){.banner .bt{max-width:68%}.banner svg.ic{width:34%;right:6%}}
+/* header photo v3: goofy */
+.brand-mark{animation:bm-goof 6s ease-in-out infinite;transform-origin:50% 90%}
+.wordmark:hover .brand-mark{animation:bm-dodge .9s ease-in-out}
+@keyframes bm-goof{
+0%,55%,100%{transform:none}
+58%{transform:translateX(-2px) rotate(-8deg)}
+61%{transform:translateX(2px) rotate(8deg)}
+64%{transform:translateX(-2px) rotate(-8deg)}
+67%{transform:none}
+72%{transform:translateY(2px) scale(1.12,.84)}
+80%{transform:translateY(-14px) rotate(360deg) scale(.9,1.12)}
+87%{transform:translateY(0) rotate(360deg) scale(1.18,.8)}
+91%{transform:translateY(-3px) rotate(360deg) scale(.96,1.05)}
+95%{transform:translateY(0) rotate(360deg) scale(1)}}
+@keyframes bm-dodge{0%{transform:none}20%{transform:translate(9px,-4px) rotate(18deg)}45%{transform:translate(-8px,2px) rotate(-22deg) scale(1.1)}70%{transform:translate(5px,-3px) rotate(12deg)}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){.brand-mark,.wordmark:hover .brand-mark{animation:none}}
 </style>
 </head>
 <body>

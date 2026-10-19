@@ -281,6 +281,22 @@ a.copy{display:inline-block;margin-top:14px;text-decoration:none}
 @keyframes bm-flip{0%,72%,100%{transform:perspective(220px) rotateY(0)}86%{transform:perspective(220px) rotateY(180deg) scale(1.08)}99%{transform:perspective(220px) rotateY(360deg)}}
 @keyframes bm-jump{0%{transform:translateY(0) scale(1,1)}30%{transform:translateY(-7px) scale(.92,1.1)}60%{transform:translateY(0) scale(1.12,.88)}100%{transform:translateY(0) scale(1,1)}}
 @media (prefers-reduced-motion:reduce){.brand-mark,.wordmark:hover .brand-mark{animation:none}}
+/* header photo v3: goofy */
+.brand-mark{animation:bm-goof 6s ease-in-out infinite;transform-origin:50% 90%}
+.wordmark:hover .brand-mark{animation:bm-dodge .9s ease-in-out}
+@keyframes bm-goof{
+0%,55%,100%{transform:none}
+58%{transform:translateX(-2px) rotate(-8deg)}
+61%{transform:translateX(2px) rotate(8deg)}
+64%{transform:translateX(-2px) rotate(-8deg)}
+67%{transform:none}
+72%{transform:translateY(2px) scale(1.12,.84)}
+80%{transform:translateY(-14px) rotate(360deg) scale(.9,1.12)}
+87%{transform:translateY(0) rotate(360deg) scale(1.18,.8)}
+91%{transform:translateY(-3px) rotate(360deg) scale(.96,1.05)}
+95%{transform:translateY(0) rotate(360deg) scale(1)}}
+@keyframes bm-dodge{0%{transform:none}20%{transform:translate(9px,-4px) rotate(18deg)}45%{transform:translate(-8px,2px) rotate(-22deg) scale(1.1)}70%{transform:translate(5px,-3px) rotate(12deg)}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){.brand-mark,.wordmark:hover .brand-mark{animation:none}}
 </style>
 </head>
 <body>
