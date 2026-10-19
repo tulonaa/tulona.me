@@ -64,7 +64,7 @@ a{color:inherit;text-decoration:none}
 .hero-rule{background:var(--signal);flex:none;width:16px;height:1px}
 .statement{font:500 clamp(44px,5.35vw,76px)/1.04 var(--display);letter-spacing:-.055em;grid-area:2/1/auto/span 7;margin-top:26px}
 .statement>span{display:block}
-.portrait{grid-area:1/9/span 3/-1;align-self:start}
+.portrait{grid-area:1/10/span 3/-1;align-self:start}
 .portrait img{aspect-ratio:1;object-fit:cover;object-position:50% 10%;border-radius:50%;width:100%;display:block}
 .portrait figcaption{color:var(--ink-3);font:400 10px/1.5 var(--mono);justify-content:space-between;gap:12px;margin-top:12px;display:flex}
 .hero-foot{flex-direction:column;grid-area:3/1/auto/span 6;gap:25px;padding-top:28px;display:flex}
@@ -184,12 +184,14 @@ a.primary:hover{color:var(--signal)}
 @media (prefers-reduced-motion:reduce){*,:before,:after{transition:none!important;animation:none!important}}
 
 /* about page */
-.pagehead{padding-block:56px 0}
+.pagehead{padding-block:72px 8px}
+.pagehead .is-line{justify-content:center;margin-top:0;gap:.35em;font-size:clamp(34px,6.4vw,88px);line-height:1}
+.pagehead .rot{font-size:clamp(46px,8.4vw,116px)}
 .pagehead h1{font:500 clamp(48px,7vw,96px)/.95 var(--display);letter-spacing:-.055em}
 .pagehead .is-line{margin-top:30px}
 .abt{column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));display:grid;padding-top:40px}
 .abt .lead{font:400 21px/1.5 var(--serif);color:var(--ink-2);grid-column:1/span 7}
-.abt .portrait{grid-area:1/9/span 3/-1;align-self:start}
+.abt .portrait{grid-area:1/10/span 3/-1;align-self:start}
 .abt .building{grid-column:1/span 7;margin-top:26px;font-size:15px;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline}
 .abt .building span{font:400 12px/1.4 var(--mono);color:var(--ink-3)}
 .abt .building a{border-bottom:1px solid var(--line)}
@@ -232,7 +234,6 @@ a.primary:hover{color:var(--signal)}
 
 <main id="main" class="frame">
   <section class="pagehead">
-    <h1>About</h1>
   <p class="is-line">
       <span class="sr-only">Tulona is writing, designing, traveling, lifting, having fun, creating, exploring, reading, learning, planning, connecting, yappering, snack hunting, canceling plans, side questing, spiraling and manifesting.</span>
       <span class="is-label" aria-hidden="true">Tulona is</span>
@@ -241,12 +242,12 @@ a.primary:hover{color:var(--signal)}
   </section>
 
   <section class="abt">
-    <p class="lead">I run outreach, partnerships and campaigns for the WPDeveloper and Storeware product lines, and I care most about the conversations around the product.</p>
+    <p class="lead">I manage partnerships and collaborations and run outreach and campaigns for the WPDeveloper and Storeware product lines, and I care most about the conversations around the product.</p>
     <figure class="portrait"><img src="../portrait.jpg" width="900" height="900" alt="Portrait of Sonia Sultana Tulona"><figcaption><span>Sonia Sultana Tulona</span></figcaption></figure>
     <p class="building"><span>Working on now</span><a href="https://xspeedcache.com">xSpeed Cache</a><a href="https://bettershield.ai">BetterShield</a><a href="https://thinkrank.ai">ThinkRank</a><a href="https://storeware.io">Storeware apps</a></p>
   </section>
 
-  <section class="prose"><h2>From ad operations to partnerships</h2><div class="body"><p>I started in December 2021 in digital ad operations at SEBPO, as a campaign manager on Google Ad Manager and FreeWheel for US-based NBCUniversal clients. That job was trafficking, QA across every screen, and delivering to client SLAs.</p><p>In 2024 I moved to Get Levrg as a business development executive, running LinkedIn and email outreach with Expandi and Apollo and learning what makes a cold message get a reply.</p><p>In May 2025 I joined WPDeveloper as Communication Executive. Today I handle who we write to, what we offer them and how a partnership gets agreed, across WPDeveloper and Storeware.</p></div></section>
+  <section class="prose"><h2>From ad operations to partnerships</h2><div class="body"><p>I started in December 2021 in Digital Ad Operations at SEBPO, as a campaign manager for US-based <a href="https://www.nbcuniversal.com/">NBCUniversal</a> clients. That job was trafficking, QA across every screen, reporting and delivering to client SLAs.</p><p>In 2024 I moved to Get Levrg as a Business Development Executive, running LinkedIn and email outreach with Expandi and Apollo and learning what makes a cold message get a reply.</p><p>In May 2025 I joined WPDeveloper as Communication Executive. Today I manage who we write to, what we offer them and how a partnership gets agreed, across WPDeveloper and Storeware.</p></div></section>
   <section class="prose"><h2>How I work</h2><div class="body"><p>Every partnership gets a structured process: research, first contact, relationship building, health monitoring, then growth and retention. I keep trackers for partner status and follow-ups so at-risk accounts surface early.</p><p>I use AI tools daily for research and outreach prep, and I write each message for the person receiving it.</p></div></section>
   <section class="prose"><h2>What I’m working on now</h2><div class="body"><p>Launch outreach and an affiliate campaign for <a href="https://xspeedcache.com">xSpeed Cache</a>, promotion planning for <a href="https://bettershield.ai">BetterShield</a>, outreach for <a href="https://thinkrank.ai">ThinkRank</a>, and cross-promotion with other Shopify app makers for StoreSEO and StoreFAQ.</p><a class="pill" href="../work/">See my work <span class="arw" aria-hidden="true">→</span></a></div></section>
 
