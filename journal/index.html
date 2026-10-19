@@ -211,7 +211,7 @@ a.primary:hover{color:var(--signal)}
 @media (width<=680px){.jr .co-name,.jr .co-what{grid-column:1/-1}}
 /* journal banner */
 .banner{position:relative;display:block;overflow:hidden;aspect-ratio:16/10;background:#a42915;color:#f7efe4;padding:7% 7% 6%;border-radius:2px}
-.banner .bt{display:block;position:relative;z-index:1;max-width:62%;font:600 clamp(26px,3.5vw,50px)/1 var(--display);letter-spacing:-.05em}
+.banner .bt{display:block;position:relative;z-index:1;max-width:52%;font:600 clamp(26px,3.5vw,50px)/1 var(--display);letter-spacing:-.05em}
 .banner svg{position:absolute;right:5%;bottom:9%;width:38%;height:auto}
 .banner .bm{position:absolute;left:7%;bottom:6%;font:600 clamp(12px,1.1vw,15px)/1 var(--display);letter-spacing:-.02em;opacity:.9}
 .banner .bm i{font-style:normal;color:#f0c35a}
@@ -251,6 +251,12 @@ img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
 @keyframes bm-ring{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.6);opacity:0}}
 @keyframes bm-wave{0%,100%{transform:rotate(0) scale(1)}25%{transform:rotate(-14deg) scale(1.12)}75%{transform:rotate(12deg) scale(1.12)}}
 @media (prefers-reduced-motion:reduce){.brand-mark,.wordmark::before,.wordmark:hover .brand-mark{animation:none}}
+.banner{background:#15110f !important}
+.banner svg{right:4% !important;bottom:auto !important;top:52%;height:70%;width:auto !important;transform:translateY(-50%)}
+a.banner:hover svg{transform:translateY(-50%) rotate(8deg) !important}
+.banner svg{transition:transform .6s}
+.banner .bm i{color:#d2321e}
+.banner .bk{position:absolute;left:7%;top:7%;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#f0c35a}
 </style>
 </head>
 <body>
@@ -285,7 +291,7 @@ img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
     <h1>Published notes</h1>
     <p>Notes on outreach, partnerships and the emails in between.</p>
   </section>
-  <section class="jfeat"><a class="banner" href="emails-people-reply-to/"><span class="bt">Emails people actually reply to.</span><svg viewBox="0 0 200 150" fill="none" aria-hidden="true"><rect x="14" y="30" width="172" height="110" rx="8" fill="#f7efe4"/><path d="M14 40l86 58 86-58" stroke="#a42915" stroke-width="5" stroke-linejoin="round"/><circle cx="160" cy="34" r="26" fill="#f0c35a"/><path d="M148 34l9 9 16-18" stroke="#a42915" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bm">Tulona<i>.</i></span></a></section>
+  <section class="jfeat"><a class="banner" href="emails-people-reply-to/"><span class="bk">Global partnerships</span><span class="bt">Outreach that crosses borders.</span><svg viewBox="0 0 200 200" fill="none" aria-hidden="true"><circle cx="100" cy="100" r="86" fill="#241a16"/><g stroke="#f7efe4" stroke-opacity=".35" stroke-width="1.4"><circle cx="100" cy="100" r="86"/><ellipse cx="100" cy="100" rx="86" ry="34"/><ellipse cx="100" cy="100" rx="86" ry="62"/><ellipse cx="100" cy="100" rx="34" ry="86"/><ellipse cx="100" cy="100" rx="62" ry="86"/><path d="M100 14v172M14 100h172"/></g><path d="M52 70Q94 41 128 54" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><path d="M128 54Q123 77 150 112" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><path d="M150 112Q110 143 84 138" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><path d="M52 70Q49 95 84 138" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><path d="M52 70Q74 67 110 96" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><path d="M110 96Q126 93 150 112" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><circle cx="52" cy="70" r="9" fill="#d2321e" opacity=".35"/><circle cx="52" cy="70" r="5" fill="#d2321e" stroke="#f7efe4" stroke-width="2"/><circle cx="128" cy="54" r="9" fill="#d2321e" opacity=".35"/><circle cx="128" cy="54" r="5" fill="#d2321e" stroke="#f7efe4" stroke-width="2"/><circle cx="150" cy="112" r="9" fill="#d2321e" opacity=".35"/><circle cx="150" cy="112" r="5" fill="#d2321e" stroke="#f7efe4" stroke-width="2"/><circle cx="84" cy="138" r="9" fill="#d2321e" opacity=".35"/><circle cx="84" cy="138" r="5" fill="#d2321e" stroke="#f7efe4" stroke-width="2"/><circle cx="110" cy="96" r="9" fill="#d2321e" opacity=".35"/><circle cx="110" cy="96" r="5" fill="#d2321e" stroke="#f7efe4" stroke-width="2"/></svg><span class="bm">Tulona<i>.</i></span></a></section>
   <section class="jyear">
     <h2 class="y">2026</h2>
     <ul>

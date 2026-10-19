@@ -211,7 +211,7 @@ a.primary:hover{color:var(--signal)}
 @media (width<=680px){.jr .co-name,.jr .co-what{grid-column:1/-1}}
 /* journal banner */
 .banner{position:relative;display:block;overflow:hidden;aspect-ratio:16/10;background:#a42915;color:#f7efe4;padding:7% 7% 6%;border-radius:2px}
-.banner .bt{display:block;position:relative;z-index:1;max-width:62%;font:600 clamp(26px,3.5vw,50px)/1 var(--display);letter-spacing:-.05em}
+.banner .bt{display:block;position:relative;z-index:1;max-width:52%;font:600 clamp(26px,3.5vw,50px)/1 var(--display);letter-spacing:-.05em}
 .banner svg{position:absolute;right:5%;bottom:9%;width:38%;height:auto}
 .banner .bm{position:absolute;left:7%;bottom:6%;font:600 clamp(12px,1.1vw,15px)/1 var(--display);letter-spacing:-.02em;opacity:.9}
 .banner .bm i{font-style:normal;color:#f0c35a}
@@ -240,6 +240,12 @@ img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
 @keyframes bm-ring{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.6);opacity:0}}
 @keyframes bm-wave{0%,100%{transform:rotate(0) scale(1)}25%{transform:rotate(-14deg) scale(1.12)}75%{transform:rotate(12deg) scale(1.12)}}
 @media (prefers-reduced-motion:reduce){.brand-mark,.wordmark::before,.wordmark:hover .brand-mark{animation:none}}
+.banner{background:#15110f !important}
+.banner svg{right:4% !important;bottom:auto !important;top:52%;height:70%;width:auto !important;transform:translateY(-50%)}
+a.banner:hover svg{transform:translateY(-50%) rotate(8deg) !important}
+.banner svg{transition:transform .6s}
+.banner .bm i{color:#d2321e}
+.banner .bk{position:absolute;left:7%;top:7%;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#f0c35a}
 </style>
 </head>
 <body>
@@ -275,7 +281,7 @@ img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
     <p class="meta">12 Oct 2026 · Partnerships</p>
     <h1>Turning “just following up” into a deal</h1>
     <p class="lead">“Just following up” is a polite way of saying nothing. A good follow-up gives the other person a reason to reply.</p>
-    <div class="banner"><span class="bt">“Just following up” becomes a deal.</span><svg viewBox="0 0 200 150" fill="none" aria-hidden="true"><path d="M20 20h110a8 8 0 0 1 8 8v52a8 8 0 0 1-8 8H70l-26 20V88H20a8 8 0 0 1-8-8V28a8 8 0 0 1 8-8z" fill="#f7efe4"/><path d="M70 64h110a8 8 0 0 1 8 8v46a8 8 0 0 1-8 8h-24v20l-26-20H70a8 8 0 0 1-8-8V72a8 8 0 0 1 8-8z" fill="#f0c35a"/><path d="M92 95l14 14 28-30" stroke="#a42915" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bm">Tulona<i>.</i></span></div>
+    <div class="banner"><span class="bk">Global partnerships</span><span class="bt">From follow-up to partnership.</span><svg viewBox="0 0 200 200" fill="none" aria-hidden="true"><circle cx="100" cy="100" r="86" fill="#241a16"/><g stroke="#f7efe4" stroke-opacity=".35" stroke-width="1.4"><circle cx="100" cy="100" r="86"/><ellipse cx="100" cy="100" rx="86" ry="34"/><ellipse cx="100" cy="100" rx="86" ry="62"/><ellipse cx="100" cy="100" rx="34" ry="86"/><ellipse cx="100" cy="100" rx="62" ry="86"/><path d="M100 14v172M14 100h172"/></g><path d="M60 98Q95 60 100 44" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><path d="M100 44Q114 48 148 78" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><path d="M148 78Q123 113 132 140" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><path d="M132 140Q104 156 78 142" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><path d="M78 142Q81 125 60 98" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><path d="M100 44Q89 83 132 140" stroke="#f0c35a" stroke-width="2.2" stroke-linecap="round"/><circle cx="60" cy="98" r="9" fill="#d2321e" opacity=".35"/><circle cx="60" cy="98" r="5" fill="#d2321e" stroke="#f7efe4" stroke-width="2"/><circle cx="100" cy="44" r="9" fill="#d2321e" opacity=".35"/><circle cx="100" cy="44" r="5" fill="#d2321e" stroke="#f7efe4" stroke-width="2"/><circle cx="148" cy="78" r="9" fill="#d2321e" opacity=".35"/><circle cx="148" cy="78" r="5" fill="#d2321e" stroke="#f7efe4" stroke-width="2"/><circle cx="132" cy="140" r="9" fill="#d2321e" opacity=".35"/><circle cx="132" cy="140" r="5" fill="#d2321e" stroke="#f7efe4" stroke-width="2"/><circle cx="78" cy="142" r="9" fill="#d2321e" opacity=".35"/><circle cx="78" cy="142" r="5" fill="#d2321e" stroke="#f7efe4" stroke-width="2"/></svg><span class="bm">Tulona<i>.</i></span></div>
     <h2>Bring something new</h2><p>Every follow-up should carry something the last email didn’t: a fresh angle, a sample, a short answer to the question they’re most likely to ask. If it only repeats the first message, it’s a reminder, not a follow-up.</p><h2>Make the next step tiny</h2><p>“Reply with a yes and I’ll send the draft” is easier to answer than “let me know your thoughts”. Small steps get taken, and big ones sit in the inbox.</p><h2>Turn “sounds interesting” into specifics</h2><p>It can mean yes, or it can mean a polite no. I find out which by getting concrete: who writes it, where it goes, and by when. A real partnership survives those questions.</p><h2>Track it, so nothing goes cold</h2><p>I keep a tracker with each partner’s status, the last touch and the next step. Accounts that go quiet get a nudge before they go cold, instead of after.</p><h2>Know when to stop</h2><p>Two or three thoughtful follow-ups are plenty. After that I leave the door open and move on, which keeps the relationship friendly for next time.</p>
     <p class="close">Keep the partnership moving, keep the tone warm, and keep the inbox somewhat under control.</p>
   </article>
