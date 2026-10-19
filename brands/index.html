@@ -221,6 +221,29 @@ a.primary:hover{color:var(--signal)}
 .dense a.co:hover .co-name{transform:none}
 @media (width<=1000px){.dense .co-what.wide{grid-column:7/-1}}
 @media (width<=680px){.dense .co-what.wide{grid-column:1/-1}}
+
+/* brand cards */
+.bc{padding-top:56px}
+.bc-head{border-bottom:1px solid var(--ink);padding-bottom:26px}
+.bc-head h1{font:500 clamp(34px,4vw,52px)/1.02 var(--display);letter-spacing:-.04em}
+.bc-head p{font:400 16px/1.6 var(--display);color:var(--ink-2);max-width:34em;margin-top:14px}
+.bcard{border-bottom:1px solid var(--line);padding:30px 0;column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));row-gap:12px;display:grid}
+.bcard .l{grid-column:1/span 4}
+.bcard .l .ix{font:400 12px/1.4 var(--mono);color:var(--ink-3)}
+.bcard .l h2{font:500 clamp(30px,3.2vw,44px)/1.05 var(--display);letter-spacing:-.04em;margin-top:10px}
+.bcard .l h2 a:hover{color:var(--signal)}
+.bcard .l .cat{color:var(--ink-3);font-size:14px;margin-top:8px}
+.bcard .m{grid-column:5/span 5}
+.bcard .m .lead{font:400 19px/1.45 var(--serif);color:var(--ink-2)}
+.bcard .m ul{margin-top:18px}
+.bcard .m li{padding:9px 0;border-top:1px solid var(--line);font-size:14px;color:var(--ink-3);line-height:1.5}
+.bcard .m li b{display:block;font-weight:500;color:var(--ink);font-size:14px}
+.bcard .m li a.n{border-bottom:1px solid var(--line)}
+.bcard .m li a.n:hover{color:var(--signal);border-color:var(--signal)}
+.bcard .r{grid-column:10/-1}
+.bcard .r b{font:300 clamp(34px,4vw,54px)/1 var(--display);letter-spacing:-.03em;display:block}
+.bcard .r span{color:var(--ink-2);font-size:13px;display:block;margin-top:8px}
+@media (width<=1000px){.bcard .l,.bcard .m,.bcard .r{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -250,44 +273,21 @@ a.primary:hover{color:var(--signal)}
 </header>
 
 <main id="main" class="frame">
-  <section id="products" class="section" style="padding-top:56px">
-    <div class="sec-head">
-      <h2>Brands I work across.</h2>
-      <p class="side">Two product lines</p>
-    </div>
-    <ul class="cos">
-      <li><a class="co" href="https://wpdeveloper.com"><span class="co-year">WordPress</span><span class="co-name">WPDeveloper</span><span class="co-what wide">Essential Addons, Essential Blocks, BetterDocs, Templately, EmbedPress, NotificationX, BetterLinks, xSpeed Cache, ThinkRank, BetterShield, Disable Comments and more.</span><span class="co-go" aria-hidden="true">→</span></a></li>
-      <li><a class="co" href="https://storeware.io"><span class="co-year">Shopify</span><span class="co-name">Storeware</span><span class="co-what wide">StoreSEO, StoreFAQ, BetterDocs for Shopify, EasyFlow and TrustSync.</span><span class="co-go" aria-hidden="true">→</span></a></li>
-    </ul>
-    <div class="sub dense">
-      <h3>WHAT I DO</h3>
-      <ul class="cos">
-      <li><div class="co"><span class="co-year">Outreach</span><span class="co-name">External email &amp; social</span><span class="co-what wide">Cold and warm outreach to creators, publishers, influencers and partner brands, written to fit each recipient.</span></div></li>
-      <li><div class="co"><span class="co-year">Partnerships</span><span class="co-name">Deals &amp; exchanges</span><span class="co-what wide">Reciprocal partnerships, backlink exchange, listicle inclusions, closing deals and relationship management.</span></div></li>
-      <li><div class="co"><span class="co-year">Content</span><span class="co-name">Writing</span><span class="co-what wide">Review blogs, listicle entries, blogs, docs, emails, case studies and outreach copy.</span></div></li>
-      <li><div class="co"><span class="co-year">Campaigns</span><span class="co-name">Launches &amp; promotion</span><span class="co-what wide">Launch outreach, affiliate campaigns, creator video collaborations, promo kits and resources, campaign planning.</span></div></li>
-      <li><div class="co"><span class="co-year">Design</span><span class="co-name">Visuals</span><span class="co-what wide">Banners and campaign visuals for launches and placements.</span></div></li>
-      <li><div class="co"><span class="co-year">Tracking</span><span class="co-name">Trackers &amp; reporting</span><span class="co-what wide">Partner status, follow-ups and account health in trackers; engagement metrics to flag at-risk relationships.</span></div></li>
-      </ul>
-    </div>
-    <div class="sub dense">
-      <h3>HOW I WORK</h3>
-      <ul class="cos">
-      <li><div class="co"><span class="co-year">Partnerships</span><span class="co-name">WPDeveloper</span><span class="co-what wide">Building B2B partner relationships that last, from first outreach to long-term account health.</span></div></li>
-      <li><div class="co"><span class="co-year">Outreach</span><span class="co-name"><a href="https://getlevrg.com/">Get Levrg</a></span><span class="co-what wide">Turning cold outreach into qualified pipeline with tailored copy and data-led refinement.</span></div></li>
-      <li><div class="co"><span class="co-year">Campaign ops</span><span class="co-name"><a href="https://alloyed.io/">SEBPO</a></span><span class="co-what wide">Keeping enterprise ad campaigns on track against client SLAs.</span></div></li>
-      </ul>
-    </div>
-    <div class="sub dense">
-      <h3>ACCOUNT APPROACH</h3>
-      <ul class="cos">
-      <li><div class="co"><span class="co-year">01</span><span class="co-name">Research &amp; discovery</span><span class="co-what wide">Market and competitor research to find partnership opportunities early.</span></div></li>
-      <li><div class="co"><span class="co-year">02</span><span class="co-name">Outreach &amp; first contact</span><span class="co-what wide">Tailored email and LinkedIn copy to start the right conversations.</span></div></li>
-      <li><div class="co"><span class="co-year">03</span><span class="co-name">Relationship building</span><span class="co-what wide">Proactive communication and tailored value to build trust.</span></div></li>
-      <li><div class="co"><span class="co-year">04</span><span class="co-name">Health monitoring</span><span class="co-what wide">Trackers and engagement metrics to flag at-risk accounts.</span></div></li>
-      <li><div class="co"><span class="co-year">05</span><span class="co-name">Growth &amp; retention</span><span class="co-what wide">Spot expansion opportunities and keep renewals on schedule.</span></div></li>
-      </ul>
-    </div>
+  <section id="products" class="bc">
+    <div class="bc-head"><h1>Brands I work across.</h1><p>Two product lines, one outreach and partnerships desk. These are the products I take to creators, publishers and partner brands.</p></div>
+    <article class="bcard">
+      <div class="l"><p class="ix">01 · WordPress</p><h2><a href="https://wpdeveloper.com">WPDeveloper <span aria-hidden="true">→</span></a></h2><p class="cat">WordPress products</p></div>
+      <div class="m"><p class="lead">Plugins that help WordPress sites get discovered, load faster, stay secure and look better.</p><ul><li><b><a class="n" href="https://xspeedcache.com">xSpeed Cache</a></b>Caching and performance optimization for WordPress.</li><li><b><a class="n" href="https://thinkrank.ai">ThinkRank</a></b>AI-powered SEO for WordPress.</li><li><b><a class="n" href="https://bettershield.ai">BetterShield</a></b>Security audits, login protection and fixes you can undo.</li><li><b>Essential Addons</b>Widgets and extensions for Elementor.</li><li><b>Essential Blocks</b>Page-building blocks for the WordPress block editor.</li><li><b>BetterDocs</b>A searchable knowledge base for your site.</li><li><b>Templately</b>Ready-made templates and cloud for WordPress.</li><li><b>EmbedPress</b>Embed videos, documents and social content.</li><li><b>NotificationX</b>Social proof and notification bars.</li><li><b>BetterLinks</b>Link shortening, tracking and redirects.</li><li><b>Disable Comments</b>Turn off comments site-wide in one click.</li></ul></div>
+      <div class="r"><b>11+</b><span>products I work across</span></div>
+    </article>
+    <article class="bcard">
+      <div class="l"><p class="ix">02 · Shopify</p><h2><a href="https://storeware.io">Storeware <span aria-hidden="true">→</span></a></h2><p class="cat">Shopify apps</p></div>
+      <div class="m"><p class="lead">Shopify apps that help merchants make their products easier to find, answer customer questions and run their stores.</p><ul><li><b><a class="n" href="https://storeware.io">StoreSEO</a></b>SEO and image optimization for Shopify stores.</li><li><b><a class="n" href="https://storeware.io">StoreFAQ</a></b>Useful answers, right on the product page.</li><li><b><a class="n" href="https://storeware.io">BetterDocs for Shopify</a></b>A searchable knowledge base for Shopify customers.</li><li><b><a class="n" href="https://storeware.io">EasyFlow</a></b>Automation for Shopify stores.</li><li><b><a class="n" href="https://storeware.io">TrustSync</a></b>Reviews and trust signals for Shopify stores.</li></ul></div>
+      <div class="r"><b>5</b><span>apps I work across</span></div>
+    </article>
+  </section>
+
+  <section class="section" style="padding-top:8px">
     <div class="sub dense">
       <h3>WHAT I BRING</h3>
       <ul class="cos">
@@ -295,14 +295,6 @@ a.primary:hover{color:var(--signal)}
       <li><div class="co"><span class="co-year">Skills</span><span class="co-name">Core strengths</span><span class="co-what wide">Communication, CRM, content, reporting and partnership development; cross-functional collaboration; client-centric, proactive follow-through.</span></div></li>
       <li><div class="co"><span class="co-year">Range</span><span class="co-name">6+ industries</span><span class="co-what wide">WordPress, SaaS, Shopify and ad-tech, including enterprise client work with NBCUniversal campaign ops.</span></div></li>
       <li><div class="co"><span class="co-year">Tools</span><span class="co-name">What I use</span><span class="co-what wide">Expandi, Apollo, Google Ad Manager, FreeWheel, Claude and ChatGPT. AI-forward research and outreach prep.</span></div></li>
-      </ul>
-    </div>
-    <div class="sub dense">
-      <h3>EXPERIENCE</h3>
-      <ul class="cos">
-      <li><div class="co"><span class="co-year">May 2025 – now</span><span class="co-name">WPDeveloper</span><span class="co-what wide"><b>Communication Executive.</b> B2B partner relationships end to end: outreach, content, tracking and daily AI-assisted research.</span></div></li>
-      <li><div class="co"><span class="co-year">May 2024 – Dec 2025</span><span class="co-name"><a href="https://getlevrg.com/">Get Levrg</a></span><span class="co-what wide"><b>Business Development Executive.</b> LinkedIn and email outreach with Expandi and Apollo, CRM data, personalised strategies for decision-makers; exceeded KPIs.</span></div></li>
-      <li><div class="co"><span class="co-year">Dec 2021 – Jun 2024</span><span class="co-name"><a href="https://alloyed.io/">SEBPO</a></span><span class="co-what wide"><b>Executive, Digital Ad Operations.</b> Campaign Manager on Google Ad Manager and FreeWheel for US-based NBCUniversal clients: task intake, trafficking, QA across desktop, mobile, tablet and video, CMR reports, SLA-driven delivery.</span></div></li>
       </ul>
     </div>
   </section>
