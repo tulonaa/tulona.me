@@ -252,6 +252,11 @@ img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
 @keyframes bm-ring{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.6);opacity:0}}
 @keyframes bm-wave{0%,100%{transform:rotate(0) scale(1)}25%{transform:rotate(-14deg) scale(1.12)}75%{transform:rotate(12deg) scale(1.12)}}
 @media (prefers-reduced-motion:reduce){.brand-mark,.wordmark::before,.wordmark:hover .brand-mark{animation:none}}
+.c-row>div{align-content:start}
+.c-row .primary{display:block;font-size:19px;line-height:1.3;font-weight:500}
+.c-row a.primary{border-bottom:1px solid transparent}
+.c-row a.primary:hover{color:var(--signal)}
+a.copy{display:inline-block;margin-top:14px;text-decoration:none}
 </style>
 </head>
 <body>
@@ -270,7 +275,7 @@ img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
       <a href="../about/">About</a>
     </nav>
     <div class="head-end">
-      <a class="hello-link" href="mailto:tulona@wpdeveloper.com">Let’s talk</a>
+      <a class="hello-link" href="mailto:soniasultanatulona@gmail.com">Let’s talk</a>
       <a class="cv-link" href="https://tulonaa.github.io/tulona-portfolio/Sonia_Sultana_Tulona_Resume.pdf" target="_blank" rel="noopener">Download CV <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v8m0 0L4.5 6.5M8 10l3.5-3.5M3 13h10"/></svg></a>
       <label class="theme-picker">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 2a6 6 0 0 0 0 12z" fill="currentColor"/></svg>
@@ -358,16 +363,16 @@ img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
     <div class="c-row">
       <div>
         <span class="lab">Email</span>
-        <span class="primary" id="mail">tulona@wpdeveloper.com</span>
-        <button class="copy" id="copy" type="button">Copy address</button>
+        <a class="primary" id="mail" href="mailto:soniasultanatulona@gmail.com">soniasultanatulona@gmail.com</a>
+        <a class="copy" href="mailto:soniasultanatulona@gmail.com">Get in touch</a>
       </div>
       <div>
         <span class="lab">Elsewhere</span>
-        <div class="c-links"><a href="https://github.com/tulonaa">GitHub</a><a href="https://www.linkedin.com/in/soniasultanatulona/">LinkedIn</a></div>
+        <a class="primary" href="https://www.linkedin.com/in/soniasultanatulona/" target="_blank" rel="noopener">Message me on LinkedIn →</a>
       </div>
       <div>
-        <span class="lab">Company</span>
-        <div class="c-links"><a href="https://wpdeveloper.com">wpdeveloper.com</a></div>
+        <span class="lab">Resume</span>
+        <a class="primary" href="https://tulonaa.github.io/tulona-portfolio/Sonia_Sultana_Tulona_Resume.pdf" target="_blank" rel="noopener">Download resume →</a>
       </div>
     </div>
     <div class="legal"><span>© 2026 Sonia Sultana Tulona</span></div>
@@ -381,7 +386,7 @@ img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
   try{var s=localStorage.getItem('tulona-theme'); if(s){sel.value=s; apply(s)}}catch(e){}
   sel.addEventListener('change',function(){apply(sel.value); try{localStorage.setItem('tulona-theme',sel.value)}catch(e){}});
   var btn=document.getElementById('copy'), mail=document.getElementById('mail');
-  btn.addEventListener('click',function(){
+  if(btn)btn.addEventListener('click',function(){
     function done(){btn.textContent='Copied'; setTimeout(function(){btn.textContent='Copy address'},1800)}
     function fallback(){var r=document.createRange(); r.selectNodeContents(mail); var g=window.getSelection(); g.removeAllRanges(); g.addRange(r); btn.textContent='Selected, press copy'}
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(mail.textContent.trim()).then(done,fallback)}else{fallback()}
