@@ -229,6 +229,19 @@ a.primary:hover{color:var(--signal)}
 .feat{margin-top:64px}
 .feat .idx{font:300 clamp(40px,5vw,72px)/.9 var(--display);letter-spacing:-.04em;color:var(--display-muted)}
 @media (width<=1000px){.flow{grid-template-columns:1fr}.flow li,.flow li:first-child{padding:18px 0}.flow li+li{border-left:0}.flow li:not(:last-child):after{display:none}}
+/* dense detail rows */
+.sub{padding-top:44px}
+.sub h3{font:500 13px/1.4 var(--mono);color:var(--ink-3);letter-spacing:.02em;padding-bottom:10px;border-bottom:1px solid var(--ink)}
+.dense .co{padding:12px 0;row-gap:2px}
+.dense .co-year{font-size:12px}
+.dense .co-name{font-size:clamp(16px,1.5vw,19px);letter-spacing:-.02em;line-height:1.25}
+.dense .co-what,.dense .co-what.wide{font-size:14px;line-height:1.5}
+.dense .co-what b{color:var(--ink);font-weight:500}
+.dense .co-what.wide{grid-column:7/span 6}
+.dense a.co:hover .co-name{transform:none}
+@media (width<=1000px){.dense .co-what.wide{grid-column:7/-1}}
+@media (width<=680px){.dense .co-what.wide{grid-column:1/-1}}
+
 </style>
 </head>
 <body>
@@ -310,6 +323,17 @@ a.primary:hover{color:var(--signal)}
     <p class="tag">Knowing which relationships need attention.</p>
     <p class="desc">Trackers for partner status, follow-ups and live placements, with engagement signals that show when an account is at risk, so I can step in before it goes quiet.</p>
     <ul><li>Partner and placement trackers</li><li>Monthly reporting on outreach and deals</li><li>Follow-up scheduling</li></ul>
+  </section>
+  <section class="section" style="padding-top:64px">
+    <div class="sub dense">
+      <h3>WHAT I BRING</h3>
+      <ul class="cos">
+      <li><div class="co"><span class="co-year">Track record</span><span class="co-name">4+ years, 50+ partnerships</span><span class="co-what wide">4+ years in B2B partnerships, 50+ partnerships closed, 95% partner retention.</span></div></li>
+      <li><div class="co"><span class="co-year">Skills</span><span class="co-name">Core strengths</span><span class="co-what wide">Communication, CRM, content, reporting and partnership development; cross-functional collaboration; client-centric, proactive follow-through.</span></div></li>
+      <li><div class="co"><span class="co-year">Range</span><span class="co-name">6+ industries</span><span class="co-what wide">WordPress, SaaS, Shopify and ad-tech, including enterprise client work with NBCUniversal campaign ops.</span></div></li>
+      <li><div class="co"><span class="co-year">Tools</span><span class="co-name">What I use</span><span class="co-what wide">Expandi, Apollo, Google Ad Manager, FreeWheel, Claude and ChatGPT. AI-forward research and outreach prep.</span></div></li>
+      </ul>
+    </div>
   </section>
   <section class="section"><p class="group-note">Looking for the products this work covers? See <a href="../brands/" style="border-bottom:1px solid var(--line)">Brands</a>.</p></section>
   <section id="contact" class="contact">
