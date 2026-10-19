@@ -208,6 +208,26 @@ a.primary:hover{color:var(--signal)}
 .card .prods a{border-bottom:1px solid var(--line)}
 .card .prods a:hover{color:var(--signal);border-color:var(--signal)}
 @media (width<=1000px){.feat h2,.feat .tag,.feat .desc,.feat ul,.feat .go,.card h3,.card .one,.card .prods{grid-column:1/-1;grid-row:auto}.feat .idx,.card .idx,.card .cat{grid-column:1/-1;grid-row:auto}}
+.feat .tools{grid-column:4/span 6;font:400 13px/1.5 var(--mono);color:var(--ink-3)}
+@media (width<=1000px){.feat .tools{grid-column:1/-1}}
+/* work v2 */
+.jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.jump a{border:1px solid var(--line);border-radius:999px;padding:10px 16px;font:500 14px/1 var(--display);transition:border-color .2s,background-color .2s}
+.jump a span{font:400 12px/1 var(--mono);color:var(--ink-3);margin-right:8px}
+.jump a:hover{border-color:var(--ink);background:var(--soft)}
+.flowwrap{margin-top:56px}
+.flow-label{font:400 13px/1.4 var(--mono);color:var(--ink-3);padding-bottom:12px;border-bottom:1px solid var(--ink)}
+.flow{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));counter-reset:s}
+.flow li{padding:22px 18px 24px;border-bottom:1px solid var(--line);position:relative}
+.flow li:first-child{padding-left:0}
+.flow li+li{border-left:1px solid var(--line)}
+.flow li:not(:last-child):after{content:"→";position:absolute;right:-9px;top:20px;background:var(--bg);color:var(--signal);font-size:15px;line-height:1;padding:2px 0;z-index:1}
+.flow b{font:400 12px/1 var(--mono);color:var(--signal)}
+.flow h3{font:500 clamp(20px,1.9vw,26px)/1.1 var(--display);letter-spacing:-.03em;margin-top:14px}
+.flow p{color:var(--ink-2);font-size:14px;line-height:1.5;margin-top:10px}
+.feat{margin-top:64px}
+.feat .idx{font:300 clamp(40px,5vw,72px)/.9 var(--display);letter-spacing:-.04em;color:var(--display-muted)}
+@media (width<=1000px){.flow{grid-template-columns:1fr}.flow li,.flow li:first-child{padding:18px 0}.flow li+li{border-left:0}.flow li:not(:last-child):after{display:none}}
 </style>
 </head>
 <body>
@@ -239,46 +259,58 @@ a.primary:hover{color:var(--signal)}
 <main id="main" class="frame">
   <section class="pagehead">
     <h1>Work</h1>
-    <p>Launches and partnerships I run for the WPDeveloper and Storeware product lines.</p>
+    <p>What I do, how I do it, and what it produces. Grouped by the kind of work, not the product.</p>
+    <nav class="jump" aria-label="Work areas"><a href="#outreach"><span>01</span>Outreach</a><a href="#partnerships"><span>02</span>Partnerships</a><a href="#campaigns"><span>03</span>Campaigns</a><a href="#content"><span>04</span>Content</a><a href="#design"><span>05</span>Design</a><a href="#tracking"><span>06</span>Tracking and reporting</a></nav>
   </section>
-
-  <section class="feat">
-    <p class="idx">01 Launch outreach</p>
-    <h2>xSpeed Cache</h2>
-    <p class="tag">Getting a new WordPress caching plugin in front of creators and publishers.</p>
-    <p class="desc">Launch outreach and an affiliate campaign across creators and publishers, from the first email to the live placement.</p>
-    <ul><li>Creator video collaborations</li><li>Listicle inclusions and review posts</li><li>Affiliate campaign</li></ul>
-    <div class="go"><a class="pill" href="https://xspeedcache.com">Explore xSpeed Cache <span class="arw" aria-hidden="true">→</span></a><span class="plat">WordPress · WPDeveloper</span></div>
+  <section id="process" class="flowwrap">
+    <p class="flow-label">Every partnership follows the same five steps</p>
+    <ol class="flow"><li><b>01</b><h3>Research</h3><p>Market and competitor research to find opportunities early.</p></li><li><b>02</b><h3>First contact</h3><p>Tailored email and LinkedIn copy to start the right conversations.</p></li><li><b>03</b><h3>Relationship</h3><p>Proactive communication and value matched to each partner.</p></li><li><b>04</b><h3>Monitoring</h3><p>Trackers and engagement signals flag at-risk accounts.</p></li><li><b>05</b><h3>Growth</h3><p>Spot expansion opportunities and keep follow-ups on schedule.</p></li></ol>
   </section>
-  <section class="feat">
-    <p class="idx">02 Partnerships</p>
-    <h2>Storeware apps</h2>
-    <p class="tag">Cross-promotion that two Shopify apps can both be proud of.</p>
-    <p class="desc">Reciprocal partnerships with other Shopify app makers for StoreSEO and StoreFAQ.</p>
-    <ul><li>Reciprocal app partnerships</li><li>Content collaborations</li><li>Joint announcements</li></ul>
-    <div class="go"><a class="pill" href="https://storeware.io">Explore Storeware <span class="arw" aria-hidden="true">→</span></a><span class="plat">Shopify · Storeware</span></div>
+  <section id="outreach" class="feat">
+    <p class="idx">01</p>
+    <h2>Outreach</h2>
+    <p class="tag">Getting the right message to the right person.</p>
+    <p class="desc">Cold and warm outreach to creators, publishers, influencers and partner brands, written for the person receiving it. I research each recipient first, then decide what to offer and how to say it.</p>
+    <ul><li>External email to creators and publishers</li><li>LinkedIn and social outreach</li><li>Follow-ups and relationship management</li></ul>
+    <p class="tools">Tools: Expandi, Apollo, Claude, ChatGPT</p>
   </section>
-
-  <section class="section">
-    <div class="sec-head"><h2>Brands I work across.</h2><p class="side">Two product lines</p></div>
-    <div class="cards">
-    <article class="card">
-      <p class="idx">01</p>
-      <p class="cat">WordPress</p>
-      <h3><a href="https://wpdeveloper.com">WPDeveloper</a></h3>
-      <p class="one">Plugins for WordPress sites, from page building to speed and security.</p>
-      <div class="prods"><a href="https://xspeedcache.com">xSpeed Cache</a><a href="https://bettershield.ai">BetterShield</a><a href="https://thinkrank.ai">ThinkRank</a><a href="https://wpdeveloper.com">Essential Addons</a><a href="https://wpdeveloper.com">Essential Blocks</a><a href="https://wpdeveloper.com">BetterDocs</a></div>
-    </article>
-    <article class="card">
-      <p class="idx">02</p>
-      <p class="cat">Shopify</p>
-      <h3><a href="https://storeware.io">Storeware</a></h3>
-      <p class="one">Apps for Shopify merchants.</p>
-      <div class="prods"><a href="https://storeware.io">StoreSEO</a><a href="https://storeware.io">StoreFAQ</a><a href="https://storeware.io">BetterDocs for Shopify</a><a href="https://storeware.io">EasyFlow</a><a href="https://storeware.io">TrustSync</a></div>
-    </article>
-    </div>
+  <section id="partnerships" class="feat">
+    <p class="idx">02</p>
+    <h2>Partnerships</h2>
+    <p class="tag">Turning a reply into an agreed deal.</p>
+    <p class="desc">Reciprocal partnerships and exchanges, from first reply to terms agreed. This includes backlink exchanges, listicle inclusions written to match each blog’s own format, and cross-promotion between product makers.</p>
+    <ul><li>Reciprocal deals and backlink exchange</li><li>Listicle inclusions with reciprocal links</li><li>Closing deals and ongoing account care</li></ul>
   </section>
-
+  <section id="campaigns" class="feat">
+    <p class="idx">03</p>
+    <h2>Campaigns</h2>
+    <p class="tag">Launches and promotions, planned end to end.</p>
+    <p class="desc">Launch outreach, affiliate campaigns, creator video collaborations and promotion planning. I plan who is approached, in what order, with which resources, and keep the timeline moving.</p>
+    <ul><li>Launch outreach and campaign planning</li><li>Affiliate campaigns and creator collaborations</li><li>Promo kits and resources for partners</li></ul>
+    <p class="tools">Product lines: WordPress and Shopify</p>
+  </section>
+  <section id="content" class="feat">
+    <p class="idx">04</p>
+    <h2>Content</h2>
+    <p class="tag">Writing that fits where it will be published.</p>
+    <p class="desc">The words around a partnership: hands-on review posts that introduce a product to a partner site’s readers, plus the emails, docs, case studies and outreach copy that move a deal along.</p>
+    <ul><li>Review blogs and listicle entries</li><li>Emails and outreach copy</li><li>Docs and case studies</li></ul>
+  </section>
+  <section id="design" class="feat">
+    <p class="idx">05</p>
+    <h2>Design</h2>
+    <p class="tag">Visuals for launches and placements.</p>
+    <p class="desc">Banners and campaign visuals made to the size and style each placement needs, so a partner can publish without extra requests.</p>
+    <ul><li>Campaign banners</li><li>Social and promotional visuals</li><li>Assets for partner placements</li></ul>
+  </section>
+  <section id="tracking" class="feat">
+    <p class="idx">06</p>
+    <h2>Tracking and reporting</h2>
+    <p class="tag">Knowing which relationships need attention.</p>
+    <p class="desc">Trackers for partner status, follow-ups and live placements, with engagement signals that show when an account is at risk, so I can step in before it goes quiet.</p>
+    <ul><li>Partner and placement trackers</li><li>Monthly reporting on outreach and deals</li><li>Follow-up scheduling</li></ul>
+  </section>
+  <section class="section"><p class="group-note">Looking for the products this work covers? See <a href="../brands/" style="border-bottom:1px solid var(--line)">Brands</a>.</p></section>
   <section id="contact" class="contact">
     <p class="kicker">Say hello</p>
     <h2 class="say">Good things start<br><span class="dim">with a conversation.</span></h2>
