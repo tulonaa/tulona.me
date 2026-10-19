@@ -189,6 +189,29 @@ a.primary:hover{color:var(--signal)}
 }
 @media (prefers-reduced-motion:reduce){*,:before,:after{transition:none!important;animation:none!important}}
 
+
+/* journal */
+.pagehead{padding-block:64px 8px}
+.pagehead h1{font:500 clamp(48px,7vw,96px)/.95 var(--display);letter-spacing:-.055em}
+.pagehead p{font:400 21px/1.5 var(--serif);color:var(--ink-2);max-width:34em;margin-top:26px}
+.jlist{padding-top:56px}
+.jr .co-name{font-size:clamp(20px,2.1vw,28px);grid-column:4/span 4;line-height:1.15}
+.jr .co-what{grid-column:8/span 4}
+.jr .co-go{grid-column:12}
+.jr .co-reach{display:none}
+.post{padding-top:64px;max-width:720px;margin-inline:auto}
+.post .back{font:500 14px/1 var(--display);color:var(--ink-2)}
+.post .back:hover{color:var(--signal)}
+.post .meta{font:400 12px/1.4 var(--mono);color:var(--ink-3);margin-top:34px}
+.post h1{font:500 clamp(36px,5vw,64px)/1.02 var(--display);letter-spacing:-.05em;margin-top:14px}
+.post .lead{font:400 22px/1.5 var(--serif);color:var(--ink-2);margin-top:26px}
+.post h2{font:500 24px/1.15 var(--display);letter-spacing:-.03em;margin-top:40px}
+.post p{color:var(--ink-2);font-size:17px;line-height:1.75;margin-top:12px}
+.post p a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:.18em}
+.post p a:hover{text-decoration-color:var(--ink)}
+.post .close{border-top:1px solid var(--line);margin-top:44px;padding-top:22px;font:400 19px/1.5 var(--serif);color:var(--ink)}
+@media (width<=1000px){.jr .co-name,.jr .co-what{grid-column:7/-1}.jr .co-go{display:none}}
+@media (width<=680px){.jr .co-name,.jr .co-what{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -203,6 +226,7 @@ a.primary:hover{color:var(--signal)}
     <nav class="nav" aria-label="Sections">
       <a href="work/">Work</a>
       <a href="brands/">Brands</a>
+      <a href="journal/">Journal</a>
       <a href="about/">About</a>
     </nav>
     <div class="head-end">
@@ -243,13 +267,13 @@ a.primary:hover{color:var(--signal)}
 
   <section id="about" class="about">
     <h2>The conversations around the product matter as much as the product.</h2>
-    <p class="lede">I handle who we write to, what we offer them, and how a partnership gets agreed, across the entire product portfolio. Basically, I turn outreach emails into warm relationships and “just following up” into actual deals.</p>
-    <p class="aside">Day-to-day work spans communication strategy, campaign planning, brand partnerships, content collaborations, promotional materials, closing deals, and relationship management across multiple channels.</p>
+    <p class="lede">I decide who gets the email, what we bring to the table, and how we turn a “sounds interesting” into an actual partnership. Basically, I turn an outreach email into warm relationships and “just following up” into actual deals.</p>
+    <p class="aside">My day-to-day? A little strategy, a looooot of emails, campaign planning, brand collabs, content deals, promo materials, and convincing people that replying to emails is, in fact, a very good idea. All while keeping the partnerships moving and my inbox somewhat under control.</p>
   </section>
 
   <section id="work" class="section">
     <div class="sec-head">
-      <h2>Works.</h2>
+      <h2>Experiences.</h2>
       <p class="side">Where I’ve worked and currently working.<br>Most recent first.</p>
     </div>
     <ul class="cos">
@@ -257,6 +281,16 @@ a.primary:hover{color:var(--signal)}
       <li><a class="co" href="https://storeware.io"><span class="co-year">Since 2025</span><span class="co-name">Storeware</span><span class="co-what">Cross-promotion and content for the Shopify app line.</span><span class="co-reach">Communication Executive</span><span class="co-go" aria-hidden="true">→</span></a></li>
       <li><a class="co" href="https://getlevrg.com/"><span class="co-year">2024 – 2025</span><span class="co-name">Get Levrg</span><span class="co-what">LinkedIn and email outreach campaigns, with CRM tracking.</span><span class="co-reach">Business Development Executive</span><span class="co-go" aria-hidden="true">→</span></a></li>
       <li><a class="co" href="https://alloyed.io/"><span class="co-year">2021 – 2024</span><span class="co-name">SEBPO</span><span class="co-what">Digital ad operations for US-based NBCUniversal clients. SEBPO has since been renamed Alloyed.</span><span class="co-reach">Executive, Digital Ad Operations</span><span class="co-go" aria-hidden="true">→</span></a></li>
+    </ul>
+  </section>
+
+  <section id="journal" class="section">
+    <div class="sec-head">
+      <h2>From the journal.</h2>
+      <p class="side"><a href="journal/">All posts →</a></p>
+    </div>
+    <ul class="cos jr">
+      <li><a class="co" href="journal/emails-people-reply-to/"><span class="co-year">19 Oct 2026</span><span class="co-name">Emails people actually reply to</span><span class="co-what">What I work out before I write a single line of an outreach email.</span><span class="co-reach">Outreach</span><span class="co-go" aria-hidden="true">→</span></a></li>
     </ul>
   </section>
 
