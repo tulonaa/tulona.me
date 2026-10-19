@@ -253,6 +253,17 @@ a.copy{display:inline-block;margin-top:14px;text-decoration:none}
 95%{transform:translateY(0) rotate(360deg) scale(1)}}
 @keyframes bm-dodge{0%{transform:none}20%{transform:translate(9px,-4px) rotate(18deg)}45%{transform:translate(-8px,2px) rotate(-22deg) scale(1.1)}70%{transform:translate(5px,-3px) rotate(12deg)}100%{transform:none}}
 @media (prefers-reduced-motion:reduce){.brand-mark,.wordmark:hover .brand-mark{animation:none}}
+.me{padding-top:56px;margin-top:56px;border-top:1px solid var(--line);column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));display:grid}
+.me-l{grid-column:1/span 4}
+.me-k{font:400 12px/1.4 var(--mono);color:var(--ink-3);margin-bottom:12px}
+.me-l li{border-top:1px solid var(--line);padding:12px 0;font-size:16px}
+.me-l li:last-child{border-bottom:1px solid var(--line)}
+.me-r{grid-column:6/span 6}
+.me-r h2{font:500 clamp(24px,2.4vw,32px)/1.1 var(--display);letter-spacing:-.03em}
+.me-r h2:not(:first-child){margin-top:38px}
+.me-r p{color:var(--ink-2);font-size:16px;line-height:1.7;margin-top:14px}
+@media (width<=1000px){.me-l,.me-r{grid-column:1/-1}.me-r{margin-top:32px}}
+.group-note a{transition:color .2s,border-color .2s}.group-note a:hover{color:var(--signal)!important;border-color:var(--signal)!important}
 </style>
 </head>
 <body>
@@ -294,7 +305,16 @@ a.copy{display:inline-block;margin-top:14px;text-decoration:none}
   <section class="abt">
     <p class="lead">I manage partnerships and collaborations and run outreach and campaigns for the WPDeveloper and Storeware product lines, and I care most about the conversations around the product.</p>
     <figure class="portrait"><img src="../portrait.jpg?v=bw" width="900" height="900" alt="Portrait of Sonia Sultana Tulona"><figcaption><span>Sonia Sultana Tulona</span></figcaption></figure>
-    <p class="building"><span>Working on now</span><a href="https://xspeedcache.com">xSpeed Cache</a><a href="https://bettershield.ai">BetterShield</a><a href="https://thinkrank.ai">ThinkRank</a><a href="https://storeware.io">Storeware apps</a></p>
+  </section>
+
+  <section class="me">
+    <div class="me-l"><p class="me-k">Off the clock</p><ul><li>Traveling</li><li>Lifting</li><li>Reading</li><li>Planning</li><li>Snack hunting</li><li>Side questing</li></ul></div>
+    <div class="me-r">
+      <h2>Outside work</h2>
+      <p>When I’m not in my inbox, I’m usually traveling, lifting, reading or planning the next thing. I’m also a serial snack hunter, a professional canceler of plans and a firm believer in side quests.</p>
+      <h2>How I recharge</h2>
+      <p>Writing and designing are how I think things through. Learning something new, yappering with friends, a little spiraling and a lot of manifesting do the rest.</p>
+    </div>
   </section>
 
   <section class="prose"><h2>From ad operations to partnerships</h2><div class="body"><p>I started in December 2021 in Digital Ad Operations at <a href="https://alloyed.io/">SEBPO</a> (now renamed Alloyed), as a campaign manager for US-based <a href="https://www.nbcuniversal.com/">NBCUniversal</a> clients. That job was trafficking, QA across every screen, reporting and delivering to client SLAs.</p><p>In 2024 I moved to <a href="https://getlevrg.com/">Get Levrg</a> as a Business Development Executive, running LinkedIn and email outreach with Expandi and Apollo and learning what makes a cold message get a reply.</p><p>In May 2025 I joined WPDeveloper as Communication Executive. Today I manage who we write to, what we offer them and how a partnership gets agreed, across WPDeveloper and Storeware.</p></div></section>
