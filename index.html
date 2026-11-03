@@ -193,7 +193,6 @@ a.primary:hover{color:var(--signal)}
 .aside .w{transition:color .18s}
 .aside .w.on{color:var(--signal)}
 .aside .w.done{color:var(--ink)}
-/* journal */
 .pagehead{padding-block:64px 8px}
 .pagehead h1{font:500 clamp(40px,5.4vw,72px)/.95 var(--display);letter-spacing:-.055em}
 .pagehead p{font:400 21px/1.5 var(--serif);color:var(--ink-2);max-width:34em;margin-top:26px}
@@ -215,27 +214,6 @@ a.primary:hover{color:var(--signal)}
 .post .close{border-top:1px solid var(--line);margin-top:44px;padding-top:22px;font:400 19px/1.5 var(--serif);color:var(--ink)}
 @media (width<=1000px){.jr .co-name,.jr .co-what{grid-column:7/-1}.jr .co-go{display:none}}
 @media (width<=680px){.jr .co-name,.jr .co-what{grid-column:1/-1}}
-/* journal banner */
-.banner{position:relative;display:block;overflow:hidden;aspect-ratio:16/10;background:#a42915;color:#f7efe4;padding:7% 7% 6%;border-radius:2px}
-.banner .bt{display:block;position:relative;z-index:1;max-width:52%;font:600 clamp(26px,3.5vw,50px)/1 var(--display);letter-spacing:-.05em}
-.banner svg{position:absolute;right:5%;bottom:9%;width:38%;height:auto}
-.banner .bm{position:absolute;left:7%;bottom:6%;font:600 clamp(12px,1.1vw,15px)/1 var(--display);letter-spacing:-.02em;opacity:.9}
-.banner .bm i{font-style:normal;color:#f0c35a}
-a.banner:hover svg{transform:translateY(-4px) rotate(-1.5deg)}
-.banner svg{transition:transform .3s}
-.jh{column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));padding-top:36px;display:grid;row-gap:28px}
-.jh .feature{grid-column:1/span 7}
-.jh .feature .cap{margin-top:14px;font:400 12px/1.4 var(--mono);color:var(--ink-3)}
-.jh .list{grid-column:9/-1}
-.jh .it{display:block;padding:0 0 26px;margin-bottom:26px;border-bottom:1px solid var(--line)}
-.jh .it:last-child{border-bottom:0;margin-bottom:0}
-.jh .it .m{font:400 12px/1.4 var(--mono);color:var(--ink-3)}
-.jh .it h3{font:500 clamp(22px,2vw,28px)/1.15 var(--display);letter-spacing:-.03em;margin-top:12px;transition:color .2s}
-.jh .it p{color:var(--ink-2);font-size:15px;line-height:1.6;margin-top:10px}
-.jh .it:hover h3{color:var(--signal)}
-.post .banner{margin-top:34px}
-@media (width<=1000px){.jh .feature,.jh .list{grid-column:1/-1}}
-@media (width<=680px){.banner .bt{max-width:70%}}
 img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
 @media (width<=1000px){.wordmark::before{width:34px;height:34px;margin-top:-17px}}
 .wordmark{position:relative}
@@ -246,37 +224,6 @@ img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
 @keyframes bm-ring{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.6);opacity:0}}
 @keyframes bm-wave{0%,100%{transform:rotate(0) scale(1)}25%{transform:rotate(-14deg) scale(1.12)}75%{transform:rotate(12deg) scale(1.12)}}
 @media (prefers-reduced-motion:reduce){.brand-mark,.wordmark::before,.wordmark:hover .brand-mark{animation:none}}
-.banner .bk{position:absolute;left:7%;top:7%;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
-/* banner v2: site colours */
-.banner{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
-.banner .bk{color:var(--signal)}
-.banner .bm i{color:var(--signal)}
-.banner .bt{max-width:42%}
-.banner svg{position:absolute;left:auto;right:3%;top:50%;bottom:auto;width:56%;height:auto;transform:translateY(-50%);transition:none}
-a.banner:hover svg{transform:translateY(-50%)}
-.banner .dots{fill:var(--ink-3);opacity:.45}
-.banner .arcs{fill:none;stroke:var(--signal);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:4 4}
-.banner .pins{fill:var(--signal);stroke:var(--soft);stroke-width:1.5}
-.banner .pins .pu{fill:var(--signal);stroke:none;opacity:.3;animation:bpulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center}
-@keyframes bpulse{0%{transform:scale(1);opacity:.45}100%{transform:scale(3.4);opacity:0}}
-a.banner:hover .arcs{animation:bdash 1.2s linear infinite}
-@keyframes bdash{to{stroke-dashoffset:-16}}
-@media (prefers-reduced-motion:reduce){.banner .pins .pu,a.banner:hover .arcs{animation:none}}
-@media (width<=680px){.banner,.jfeat .banner{aspect-ratio:auto;padding:46px 7% 56px}.banner .bt{max-width:100%;font-size:28px}.banner svg{position:relative;display:block;width:100%;right:auto;top:auto;bottom:auto;transform:none;margin-top:18px}a.banner:hover svg{transform:none}}
-/* banner v2 */
-.banner{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
-.banner .bt{max-width:46%}
-.banner .bk{color:var(--signal)}
-.banner .bm i{color:var(--signal)}
-.banner svg{position:absolute;right:3%;left:auto;bottom:auto;top:50%;width:54%;height:auto;transform:translateY(-50%);transition:none}
-a.banner:hover svg{transform:translateY(-50%)}
-.banner .dot{fill:var(--ink);opacity:.22}
-.banner .arc{fill:none;stroke:var(--signal);stroke-width:1.8;stroke-linecap:round}
-.banner .node{fill:var(--signal);stroke:var(--soft);stroke-width:1.5}
-.banner .ring{fill:none;stroke:var(--signal);stroke-width:1.2;opacity:.6;transform-box:fill-box;transform-origin:center;animation:bpulse 2.6s ease-out infinite}
-@keyframes bpulse{0%{transform:scale(.6);opacity:.8}100%{transform:scale(2.2);opacity:0}}
-@media (prefers-reduced-motion:reduce){.banner .ring{animation:none}}
-@media (width<=680px){.jfeat .banner,.banner{aspect-ratio:4/3}.banner .bt{max-width:90%;font-size:26px}.banner svg{width:80%;top:auto;bottom:11%;transform:none;right:3%}a.banner:hover svg{transform:none}}
 .c-row>div{align-content:start}
 .c-row .primary{display:block;font-size:19px;line-height:1.3;font-weight:500}
 .c-row a.primary{border-bottom:1px solid transparent}
@@ -297,17 +244,6 @@ a.copy{display:inline-block;margin-top:14px;text-decoration:none}
 @keyframes bm-flip{0%,72%,100%{transform:perspective(220px) rotateY(0)}86%{transform:perspective(220px) rotateY(180deg) scale(1.08)}99%{transform:perspective(220px) rotateY(360deg)}}
 @keyframes bm-jump{0%{transform:translateY(0) scale(1,1)}30%{transform:translateY(-7px) scale(.92,1.1)}60%{transform:translateY(0) scale(1.12,.88)}100%{transform:translateY(0) scale(1,1)}}
 @media (prefers-reduced-motion:reduce){.brand-mark,.wordmark:hover .brand-mark{animation:none}}
-/* banner v3 */
-.banner{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
-.banner .bt{max-width:58%;font-size:clamp(26px,3.3vw,46px)}
-.banner svg.ic{position:absolute;right:7%;left:auto;top:50%;bottom:auto;width:30%;height:auto;max-height:70%;transform:translateY(-50%);color:var(--ink)}
-.banner svg.ic .ac{stroke:var(--signal)}
-a.banner:hover svg.ic{transform:translateY(-50%) scale(1.04)}
-.banner svg.ic{transition:transform .3s}
-.jyear .th{display:grid;place-items:center;color:var(--ink)}
-.jyear .th svg.ic{width:62%;height:auto;max-height:80%;stroke-width:7}
-.jyear .th svg.ic .ac{stroke:var(--signal)}
-@media (width<=680px){.banner .bt{max-width:68%}.banner svg.ic{width:34%;right:6%}}
 /* header photo v3: goofy */
 .brand-mark{animation:bm-goof 6s ease-in-out infinite;transform-origin:50% 90%}
 .wordmark:hover .brand-mark{animation:bm-dodge .9s ease-in-out}
@@ -329,6 +265,26 @@ a.banner:hover svg.ic{transform:translateY(-50%) scale(1.04)}
 .about .building a{border-bottom:1px solid var(--line);transition:color .2s,border-color .2s}
 .about .building a:hover{color:var(--signal);border-color:var(--signal)}
 .group-note a{transition:color .2s,border-color .2s}.group-note a:hover{color:var(--signal)!important;border-color:var(--signal)!important}
+/* pencil banners */
+.banner{position:relative;display:block;overflow:hidden;aspect-ratio:16/10;background:var(--soft);color:var(--ink);border:1px solid var(--line);border-radius:2px;padding:7% 7% 6%}
+.banner:before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)' opacity='.5'/%3E%3C/svg%3E");opacity:.07;mix-blend-mode:multiply;pointer-events:none}
+.banner .bk{position:absolute;left:7%;top:7%;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--signal)}
+.banner .bt{display:block;position:relative;z-index:1;max-width:54%;margin-top:18px;font:600 clamp(30px,4.2vw,58px)/.98 "Caveat","Segoe Script","Bradley Hand",cursive;letter-spacing:0}
+.banner svg.sk{position:absolute;right:5%;top:50%;width:36%;height:auto;max-height:78%;transform:translateY(-50%);color:var(--ink);transition:transform .4s}
+a.banner:hover svg.sk{transform:translateY(-50%) rotate(-3deg)}
+.banner .bm{position:absolute;left:7%;bottom:6%;font:600 clamp(12px,1.1vw,15px)/1 var(--display);letter-spacing:-.02em}
+.banner .bm i{font-style:normal;color:var(--signal)}
+@media (width<=680px){.banner{aspect-ratio:4/3}.banner .bt{max-width:62%;font-size:clamp(28px,8vw,40px)}.banner svg.sk{width:40%}}
+.jh{column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));padding-top:36px;display:grid;row-gap:28px}
+.jh .feature{grid-column:1/span 7}
+.jh .list{grid-column:9/-1}
+.jh .it{display:block;padding:0 0 22px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.jh .it:last-child{border-bottom:0;margin-bottom:0}
+.jh .it .m{font:400 12px/1.4 var(--mono);color:var(--ink-3)}
+.jh .it h3{font:500 clamp(20px,1.8vw,26px)/1.15 var(--display);letter-spacing:-.03em;margin-top:10px;transition:color .2s}
+.jh .it p{color:var(--ink-2);font-size:15px;line-height:1.6;margin-top:8px}
+.jh .it:hover h3{color:var(--signal)}
+@media (width<=1000px){.jh .feature,.jh .list{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -408,10 +364,11 @@ a.banner:hover svg.ic{transform:translateY(-50%) scale(1.04)}
       <p class="side"><a href="journal/">All entries →</a></p>
     </div>
     <div class="jh">
-      <div class="feature"><a class="banner" href="journal/emails-people-reply-to/"><span class="bk">Outreach</span><span class="bt">Emails people actually reply to</span><svg class="ic" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="30" y="55" width="140" height="95" rx="8"/><path d="M30 65l70 50 70-50"/><path class="ac" d="M120 30h40m0 0l-12-12m12 12l-12 12"/></svg><span class="bm">Tulona<i>.</i></span></a></div>
+      <div class="feature"><a class="banner" href="journal/every-email-starts-with-an-intention/"><span class="bk">Intention</span><span class="bt">every email i send starts with an intention</span><svg class="sk" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><filter id="pen" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter><filter id="pen2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter><pattern id="hat" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="5" stroke="currentColor" stroke-width="1.1"/></pattern></defs><g filter="url(#pen)" stroke-width="2.4" opacity=".9"><rect x="26" y="78" width="148" height="92" rx="7"/><path d="M26 86L100 138L174 86"/><path d="M26 170L84 118M174 170L116 118"/><path transform="translate(100 62) scale(0.9)" d="M0 0C-36-22-28-46 0-28C28-46 36-22 0 0Z"/><path d="M158 24a16 16 0 1 0 12 28a12 12 0 1 1-12-28z"/></g><g filter="url(#pen2)" stroke-width="1.3" opacity=".5" transform="translate(1.6 -1.2)"><rect x="26" y="78" width="148" height="92" rx="7"/><path d="M26 86L100 138L174 86"/><path d="M26 170L84 118M174 170L116 118"/><path transform="translate(100 62) scale(0.9)" d="M0 0C-36-22-28-46 0-28C28-46 36-22 0 0Z"/><path d="M158 24a16 16 0 1 0 12 28a12 12 0 1 1-12-28z"/></g><g fill="url(#hat)" stroke="none" opacity=".35" filter="url(#pen2)"><path d="M34 88L100 134L166 88V162H34Z"/><path d="M92 40l20 20M80 52l20 20M104 36l18 18"/></g></svg><span class="bm">Tulona<i>.</i></span></a></div>
       <div class="list">
-      <a class="it" href="journal/emails-people-reply-to/"><p class="m">Outreach · 19 Oct 2026</p><h3>Emails people actually reply to</h3><p>What I work out before I write a single line of an outreach email.</p></a>
-      <a class="it" href="journal/just-following-up/"><p class="m">Partnerships · 12 Oct 2026</p><h3>Turning “just following up” into a deal</h3><p>Why a follow-up needs something new in it, and how a “sounds interesting” becomes a plan.</p></a>
+      <a class="it" href="journal/every-email-starts-with-an-intention/"><p class="m">Intention · 3 Nov 2026</p><h3>every email i send starts with an intention</h3><p>A hadith I come back to every time I open a blank draft.</p></a>
+      <a class="it" href="journal/the-honest-merchant-and-the-honest-pitch/"><p class="m">Trust · 27 Oct 2026</p><h3>the honest merchant and the honest pitch</h3><p>What the scales in the Qur’an have to do with an outreach email.</p></a>
+      <a class="it" href="journal/tie-your-camel-then-follow-up/"><p class="m">Patience · 20 Oct 2026</p><h3>tie your camel, then follow up</h3><p>How I think about follow-ups, and what happens after I press send.</p></a>
       </div>
     </div>
   </section>

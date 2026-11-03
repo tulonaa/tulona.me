@@ -187,7 +187,6 @@ a.primary:hover{color:var(--signal)}
 @media (prefers-reduced-motion:reduce){*,:before,:after{transition:none!important;animation:none!important}}
 
 
-/* journal */
 .pagehead{padding-block:64px 8px}
 .pagehead h1{font:500 clamp(40px,5.4vw,72px)/.95 var(--display);letter-spacing:-.055em}
 .pagehead p{font:400 21px/1.5 var(--serif);color:var(--ink-2);max-width:34em;margin-top:26px}
@@ -209,38 +208,6 @@ a.primary:hover{color:var(--signal)}
 .post .close{border-top:1px solid var(--line);margin-top:44px;padding-top:22px;font:400 19px/1.5 var(--serif);color:var(--ink)}
 @media (width<=1000px){.jr .co-name,.jr .co-what{grid-column:7/-1}.jr .co-go{display:none}}
 @media (width<=680px){.jr .co-name,.jr .co-what{grid-column:1/-1}}
-/* journal banner */
-.banner{position:relative;display:block;overflow:hidden;aspect-ratio:16/10;background:#a42915;color:#f7efe4;padding:7% 7% 6%;border-radius:2px}
-.banner .bt{display:block;position:relative;z-index:1;max-width:52%;font:600 clamp(26px,3.5vw,50px)/1 var(--display);letter-spacing:-.05em}
-.banner svg{position:absolute;right:5%;bottom:9%;width:38%;height:auto}
-.banner .bm{position:absolute;left:7%;bottom:6%;font:600 clamp(12px,1.1vw,15px)/1 var(--display);letter-spacing:-.02em;opacity:.9}
-.banner .bm i{font-style:normal;color:#f0c35a}
-a.banner:hover svg{transform:translateY(-4px) rotate(-1.5deg)}
-.banner svg{transition:transform .3s}
-.jh{column-gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));padding-top:36px;display:grid;row-gap:28px}
-.jh .feature{grid-column:1/span 7}
-.jh .feature .cap{margin-top:14px;font:400 12px/1.4 var(--mono);color:var(--ink-3)}
-.jh .list{grid-column:9/-1}
-.jh .it{display:block;padding:0 0 26px;margin-bottom:26px;border-bottom:1px solid var(--line)}
-.jh .it:last-child{border-bottom:0;margin-bottom:0}
-.jh .it .m{font:400 12px/1.4 var(--mono);color:var(--ink-3)}
-.jh .it h3{font:500 clamp(22px,2vw,28px)/1.15 var(--display);letter-spacing:-.03em;margin-top:12px;transition:color .2s}
-.jh .it p{color:var(--ink-2);font-size:15px;line-height:1.6;margin-top:10px}
-.jh .it:hover h3{color:var(--signal)}
-.post .banner{margin-top:34px}
-@media (width<=1000px){.jh .feature,.jh .list{grid-column:1/-1}}
-@media (width<=680px){.banner .bt{max-width:70%}}
-/* journal list */
-.jfeat{padding-top:44px}
-.jfeat .banner{aspect-ratio:21/9}
-.jfeat .banner .bt{max-width:55%}
-.jyear{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);padding-top:56px}
-.jyear .y{grid-column:1/span 2;align-self:start;background:var(--soft);padding:18px 16px;text-align:right;font:300 24px/1 var(--display);letter-spacing:-.02em;margin-left:calc(var(--pad)*-1);padding-left:var(--pad)}
-.jyear ul{grid-column:3/-1}
-.jyear li a{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);font:500 clamp(16px,1.5vw,19px)/1.35 var(--display);letter-spacing:-.015em}
-.jyear li a:hover .t{color:var(--signal)}
-.jyear .d{font:500 14px/1.7 var(--display);color:var(--ink-3);text-transform:uppercase;letter-spacing:.02em}
-@media (width<=680px){.jyear .y{grid-column:1/-1;margin:0 0 14px;text-align:left;padding:12px 14px}.jyear ul{grid-column:1/-1}.jyear li a{grid-template-columns:76px 1fr;gap:10px}.jfeat .banner{aspect-ratio:16/10}.jfeat .banner .bt{max-width:70%}}
 img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
 @media (width<=1000px){.wordmark::before{width:34px;height:34px;margin-top:-17px}}
 .wordmark{position:relative}
@@ -251,37 +218,6 @@ img[src*="portrait.jpg"]{filter:grayscale(1)}/* animated brand photo */
 @keyframes bm-ring{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.6);opacity:0}}
 @keyframes bm-wave{0%,100%{transform:rotate(0) scale(1)}25%{transform:rotate(-14deg) scale(1.12)}75%{transform:rotate(12deg) scale(1.12)}}
 @media (prefers-reduced-motion:reduce){.brand-mark,.wordmark::before,.wordmark:hover .brand-mark{animation:none}}
-.banner .bk{position:absolute;left:7%;top:7%;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
-/* banner v2: site colours */
-.banner{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
-.banner .bk{color:var(--signal)}
-.banner .bm i{color:var(--signal)}
-.banner .bt{max-width:42%}
-.banner svg{position:absolute;left:auto;right:3%;top:50%;bottom:auto;width:56%;height:auto;transform:translateY(-50%);transition:none}
-a.banner:hover svg{transform:translateY(-50%)}
-.banner .dots{fill:var(--ink-3);opacity:.45}
-.banner .arcs{fill:none;stroke:var(--signal);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:4 4}
-.banner .pins{fill:var(--signal);stroke:var(--soft);stroke-width:1.5}
-.banner .pins .pu{fill:var(--signal);stroke:none;opacity:.3;animation:bpulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center}
-@keyframes bpulse{0%{transform:scale(1);opacity:.45}100%{transform:scale(3.4);opacity:0}}
-a.banner:hover .arcs{animation:bdash 1.2s linear infinite}
-@keyframes bdash{to{stroke-dashoffset:-16}}
-@media (prefers-reduced-motion:reduce){.banner .pins .pu,a.banner:hover .arcs{animation:none}}
-@media (width<=680px){.banner,.jfeat .banner{aspect-ratio:auto;padding:46px 7% 56px}.banner .bt{max-width:100%;font-size:28px}.banner svg{position:relative;display:block;width:100%;right:auto;top:auto;bottom:auto;transform:none;margin-top:18px}a.banner:hover svg{transform:none}}
-/* banner v2 */
-.banner{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
-.banner .bt{max-width:46%}
-.banner .bk{color:var(--signal)}
-.banner .bm i{color:var(--signal)}
-.banner svg{position:absolute;right:3%;left:auto;bottom:auto;top:50%;width:54%;height:auto;transform:translateY(-50%);transition:none}
-a.banner:hover svg{transform:translateY(-50%)}
-.banner .dot{fill:var(--ink);opacity:.22}
-.banner .arc{fill:none;stroke:var(--signal);stroke-width:1.8;stroke-linecap:round}
-.banner .node{fill:var(--signal);stroke:var(--soft);stroke-width:1.5}
-.banner .ring{fill:none;stroke:var(--signal);stroke-width:1.2;opacity:.6;transform-box:fill-box;transform-origin:center;animation:bpulse 2.6s ease-out infinite}
-@keyframes bpulse{0%{transform:scale(.6);opacity:.8}100%{transform:scale(2.2);opacity:0}}
-@media (prefers-reduced-motion:reduce){.banner .ring{animation:none}}
-@media (width<=680px){.jfeat .banner,.banner{aspect-ratio:4/3}.banner .bt{max-width:90%;font-size:26px}.banner svg{width:80%;top:auto;bottom:11%;transform:none;right:3%}a.banner:hover svg{transform:none}}
 .c-row>div{align-content:start}
 .c-row .primary{display:block;font-size:19px;line-height:1.3;font-weight:500}
 .c-row a.primary{border-bottom:1px solid transparent}
@@ -295,14 +231,6 @@ a.copy{display:inline-block;margin-top:14px;text-decoration:none}
 @media (width<=1000px){.c-row>div:nth-child(1){grid-column:1/-1}.c-row>div:nth-child(2){grid-column:1/span 6}.c-row>div:nth-child(3){grid-column:7/span 6}}
 @media (width<=680px){.c-row>div:nth-child(n){grid-column:1/-1}}
 @media (width>1000px){.contact .is-line{grid-area:2/8/auto/-1;justify-content:flex-start}}
-/* journal thumbs */
-.jyear li a{grid-template-columns:90px 132px 1fr !important;align-items:center}
-.jyear .th{display:block;aspect-ratio:16/9;background:var(--soft);border:1px solid var(--line);border-radius:2px;overflow:hidden}
-.jyear .th svg{display:block;width:100%;height:100%}
-.jyear .th .dot{fill:var(--ink);opacity:.22}
-.jyear .th .arc{fill:none;stroke:var(--signal);stroke-width:4;stroke-linecap:round}
-.jyear .th .node{fill:var(--signal)}
-@media (width<=680px){.jyear li a{grid-template-columns:64px 88px 1fr !important;gap:10px}}
 /* header photo v2: coin flip */
 .wordmark::before{display:none}
 .brand-mark{animation:bm-flip 5s ease-in-out infinite;box-shadow:none;backface-visibility:visible}
@@ -310,17 +238,6 @@ a.copy{display:inline-block;margin-top:14px;text-decoration:none}
 @keyframes bm-flip{0%,72%,100%{transform:perspective(220px) rotateY(0)}86%{transform:perspective(220px) rotateY(180deg) scale(1.08)}99%{transform:perspective(220px) rotateY(360deg)}}
 @keyframes bm-jump{0%{transform:translateY(0) scale(1,1)}30%{transform:translateY(-7px) scale(.92,1.1)}60%{transform:translateY(0) scale(1.12,.88)}100%{transform:translateY(0) scale(1,1)}}
 @media (prefers-reduced-motion:reduce){.brand-mark,.wordmark:hover .brand-mark{animation:none}}
-/* banner v3 */
-.banner{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
-.banner .bt{max-width:58%;font-size:clamp(26px,3.3vw,46px)}
-.banner svg.ic{position:absolute;right:7%;left:auto;top:50%;bottom:auto;width:30%;height:auto;max-height:70%;transform:translateY(-50%);color:var(--ink)}
-.banner svg.ic .ac{stroke:var(--signal)}
-a.banner:hover svg.ic{transform:translateY(-50%) scale(1.04)}
-.banner svg.ic{transition:transform .3s}
-.jyear .th{display:grid;place-items:center;color:var(--ink)}
-.jyear .th svg.ic{width:100%;height:100%;stroke-width:6;transform:scale(1.12)}
-.jyear .th svg.ic .ac{stroke:var(--signal)}
-@media (width<=680px){.banner .bt{max-width:68%}.banner svg.ic{width:34%;right:6%}}
 /* header photo v3: goofy */
 .brand-mark{animation:bm-goof 6s ease-in-out infinite;transform-origin:50% 90%}
 .wordmark:hover .brand-mark{animation:bm-dodge .9s ease-in-out}
@@ -338,6 +255,28 @@ a.banner:hover svg.ic{transform:translateY(-50%) scale(1.04)}
 @keyframes bm-dodge{0%{transform:none}20%{transform:translate(9px,-4px) rotate(18deg)}45%{transform:translate(-8px,2px) rotate(-22deg) scale(1.1)}70%{transform:translate(5px,-3px) rotate(12deg)}100%{transform:none}}
 @media (prefers-reduced-motion:reduce){.brand-mark,.wordmark:hover .brand-mark{animation:none}}
 .group-note a{transition:color .2s,border-color .2s}.group-note a:hover{color:var(--signal)!important;border-color:var(--signal)!important}
+/* pencil banners */
+.banner{position:relative;display:block;overflow:hidden;aspect-ratio:16/10;background:var(--soft);color:var(--ink);border:1px solid var(--line);border-radius:2px;padding:7% 7% 6%}
+.banner:before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)' opacity='.5'/%3E%3C/svg%3E");opacity:.07;mix-blend-mode:multiply;pointer-events:none}
+.banner .bk{position:absolute;left:7%;top:7%;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--signal)}
+.banner .bt{display:block;position:relative;z-index:1;max-width:54%;margin-top:18px;font:600 clamp(30px,4.2vw,58px)/.98 "Caveat","Segoe Script","Bradley Hand",cursive;letter-spacing:0}
+.banner svg.sk{position:absolute;right:5%;top:50%;width:36%;height:auto;max-height:78%;transform:translateY(-50%);color:var(--ink);transition:transform .4s}
+a.banner:hover svg.sk{transform:translateY(-50%) rotate(-3deg)}
+.banner .bm{position:absolute;left:7%;bottom:6%;font:600 clamp(12px,1.1vw,15px)/1 var(--display);letter-spacing:-.02em}
+.banner .bm i{font-style:normal;color:var(--signal)}
+@media (width<=680px){.banner{aspect-ratio:4/3}.banner .bt{max-width:62%;font-size:clamp(28px,8vw,40px)}.banner svg.sk{width:40%}}
+.jfeat{padding-top:44px}
+.jfeat .banner{aspect-ratio:21/9}
+.jfeat .banner .bt{max-width:50%}
+.jyear{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);padding-top:56px}
+.jyear .y{grid-column:1/span 2;align-self:start;background:var(--soft);padding:18px 16px;text-align:right;font:300 24px/1 var(--display);letter-spacing:-.02em;margin-left:calc(var(--pad)*-1);padding-left:var(--pad)}
+.jyear ul{grid-column:3/-1}
+.jyear li a{display:grid;grid-template-columns:90px 132px 1fr;gap:16px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line);font:500 clamp(16px,1.5vw,19px)/1.35 var(--display);letter-spacing:-.015em}
+.jyear li a:hover .t{color:var(--signal)}
+.jyear .d{font:500 14px/1.7 var(--display);color:var(--ink-3);text-transform:uppercase;letter-spacing:.02em}
+.jyear .th{display:block;aspect-ratio:16/9;background:var(--soft);border:1px solid var(--line);border-radius:2px;overflow:hidden;color:var(--ink)}
+.jyear .th svg{display:block;width:100%;height:100%}
+@media (width<=680px){.jyear .y{grid-column:1/-1;margin:0 0 14px;text-align:left;padding:12px 14px}.jyear ul{grid-column:1/-1}.jyear li a{grid-template-columns:64px 88px 1fr;gap:10px}.jfeat .banner{aspect-ratio:4/3}}
 </style>
 </head>
 <body>
@@ -370,20 +309,18 @@ a.banner:hover svg.ic{transform:translateY(-50%) scale(1.04)}
 <main id="main" class="frame">
   <section class="pagehead">
     <h1>Published notes</h1>
-    <p>Notes on outreach, partnerships and the emails in between.</p>
+    <p>Notes on faith, work and the conversations in between.</p>
   </section>
-  <section class="jfeat"><a class="banner" href="emails-people-reply-to/"><span class="bk">Outreach</span><span class="bt">Emails people actually reply to</span><svg class="ic" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="30" y="55" width="140" height="95" rx="8"/><path d="M30 65l70 50 70-50"/><path class="ac" d="M120 30h40m0 0l-12-12m12 12l-12 12"/></svg><span class="bm">Tulona<i>.</i></span></a></section>
+  <section class="jfeat"><a class="banner" href="every-email-starts-with-an-intention/"><span class="bk">Intention</span><span class="bt">every email i send starts with an intention</span><svg class="sk" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><filter id="pen" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter><filter id="pen2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter><pattern id="hat" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="5" stroke="currentColor" stroke-width="1.1"/></pattern></defs><g filter="url(#pen)" stroke-width="2.4" opacity=".9"><rect x="26" y="78" width="148" height="92" rx="7"/><path d="M26 86L100 138L174 86"/><path d="M26 170L84 118M174 170L116 118"/><path transform="translate(100 62) scale(0.9)" d="M0 0C-36-22-28-46 0-28C28-46 36-22 0 0Z"/><path d="M158 24a16 16 0 1 0 12 28a12 12 0 1 1-12-28z"/></g><g filter="url(#pen2)" stroke-width="1.3" opacity=".5" transform="translate(1.6 -1.2)"><rect x="26" y="78" width="148" height="92" rx="7"/><path d="M26 86L100 138L174 86"/><path d="M26 170L84 118M174 170L116 118"/><path transform="translate(100 62) scale(0.9)" d="M0 0C-36-22-28-46 0-28C28-46 36-22 0 0Z"/><path d="M158 24a16 16 0 1 0 12 28a12 12 0 1 1-12-28z"/></g><g fill="url(#hat)" stroke="none" opacity=".35" filter="url(#pen2)"><path d="M34 88L100 134L166 88V162H34Z"/><path d="M92 40l20 20M80 52l20 20M104 36l18 18"/></g></svg><span class="bm">Tulona<i>.</i></span></a></section>
   <section class="jyear">
     <h2 class="y">2026</h2>
     <ul>
-      <li><a href="emails-people-reply-to/"><span class="d">Oct 19</span><span class="th"><svg class="ic" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="30" y="55" width="140" height="95" rx="8"/><path d="M30 65l70 50 70-50"/><path class="ac" d="M120 30h40m0 0l-12-12m12 12l-12 12"/></svg></span><span class="t">Emails people actually reply to</span></a></li>
-      <li><a href="just-following-up/"><span class="d">Oct 12</span><span class="th"><svg class="ic" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 40h100a8 8 0 0 1 8 8v52a8 8 0 0 1-8 8H70l-28 22V108H30a8 8 0 0 1-8-8V48a8 8 0 0 1 8-8z"/><path class="ac" d="M100 150l18 18 42-46"/></svg></span><span class="t">Turning “just following up” into a deal</span></a></li>
-      <li><a href="partnering-across-time-zones/"><span class="d">Oct 5</span><span class="th"><svg class="ic" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="62" cy="100" r="42"/><path d="M62 74v26l16 10"/><circle class="ac" cx="148" cy="100" r="42"/><path class="ac" d="M148 74v26l-12 10"/></svg></span><span class="t">Partnering across time zones</span></a></li>
-      <li><a href="researching-a-partner/"><span class="d">Sep 28</span><span class="th"><svg class="ic" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="88" cy="88" r="52"/><path class="ac" d="M126 126l46 46"/><circle cx="88" cy="76" r="12"/><path d="M64 112c4-14 14-20 24-20s20 6 24 20"/></svg></span><span class="t">How I research a partner before I write</span></a></li>
-      <li><a href="what-makes-a-collaboration-worth-it/"><span class="d">Sep 21</span><span class="th"><svg class="ic" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="75" cy="100" r="50"/><circle cx="125" cy="100" r="50"/><path class="ac" d="M84 100l14 14 28-30"/></svg></span><span class="t">What makes a collaboration worth saying yes to</span></a></li>
-      <li><a href="value-exchanges-both-sides-want/"><span class="d">Sep 14</span><span class="th"><svg class="ic" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 70h130m0 0l-18-18m18 18l-18 18"/><path class="ac" d="M170 130H40m0 0l18-18m-18 18l18 18"/></svg></span><span class="t">Value exchanges both sides actually want</span></a></li>
-      <li><a href="keeping-partnerships-warm/"><span class="d">Sep 7</span><span class="th"><svg class="ic" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M100 30c10 24 38 34 38 72a38 38 0 0 1-76 0c0-20 12-28 18-44 6 10 8 14 12 20 4-14 4-30 8-48z"/><path class="ac" d="M86 112c0 12 8 20 14 20s14-8 14-20c0-10-8-16-14-26-6 10-14 16-14 26z"/></svg></span><span class="t">Keeping a partnership warm after launch</span></a></li>
-    </ul>
+      <li><a href="every-email-starts-with-an-intention/"><span class="d">Nov 3</span><span class="th"><svg class="sk" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><filter id="pen" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter><filter id="pen2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter><pattern id="hat" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="5" stroke="currentColor" stroke-width="1.1"/></pattern></defs><g filter="url(#pen)" stroke-width="2.4" opacity=".9"><rect x="26" y="78" width="148" height="92" rx="7"/><path d="M26 86L100 138L174 86"/><path d="M26 170L84 118M174 170L116 118"/><path transform="translate(100 62) scale(0.9)" d="M0 0C-36-22-28-46 0-28C28-46 36-22 0 0Z"/><path d="M158 24a16 16 0 1 0 12 28a12 12 0 1 1-12-28z"/></g><g filter="url(#pen2)" stroke-width="1.3" opacity=".5" transform="translate(1.6 -1.2)"><rect x="26" y="78" width="148" height="92" rx="7"/><path d="M26 86L100 138L174 86"/><path d="M26 170L84 118M174 170L116 118"/><path transform="translate(100 62) scale(0.9)" d="M0 0C-36-22-28-46 0-28C28-46 36-22 0 0Z"/><path d="M158 24a16 16 0 1 0 12 28a12 12 0 1 1-12-28z"/></g><g fill="url(#hat)" stroke="none" opacity=".35" filter="url(#pen2)"><path d="M34 88L100 134L166 88V162H34Z"/><path d="M92 40l20 20M80 52l20 20M104 36l18 18"/></g></svg></span><span class="t">every email i send starts with an intention</span></a></li>
+      <li><a href="the-honest-merchant-and-the-honest-pitch/"><span class="d">Oct 27</span><span class="th"><svg class="sk" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><filter id="pen" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter><filter id="pen2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter><pattern id="hat" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="5" stroke="currentColor" stroke-width="1.1"/></pattern></defs><g filter="url(#pen)" stroke-width="2.4" opacity=".9"><path d="M100 36V162M66 162H134M40 62H160"/><circle cx="100" cy="36" r="6"/><path d="M50 62L28 116M50 62L72 116M150 62L128 116M150 62L172 116"/><path d="M24 116Q50 140 76 116Z"/><path d="M124 116Q150 140 176 116Z"/><circle cx="100" cy="170" r="0"/></g><g filter="url(#pen2)" stroke-width="1.3" opacity=".5" transform="translate(1.6 -1.2)"><path d="M100 36V162M66 162H134M40 62H160"/><circle cx="100" cy="36" r="6"/><path d="M50 62L28 116M50 62L72 116M150 62L128 116M150 62L172 116"/><path d="M24 116Q50 140 76 116Z"/><path d="M124 116Q150 140 176 116Z"/><circle cx="100" cy="170" r="0"/></g><g fill="url(#hat)" stroke="none" opacity=".35" filter="url(#pen2)"><path d="M26 116Q50 140 76 116Z"/><path d="M124 116Q150 140 176 116Z"/><path d="M34 126l28 0M136 126l28 0"/></g></svg></span><span class="t">the honest merchant and the honest pitch</span></a></li>
+      <li><a href="tie-your-camel-then-follow-up/"><span class="d">Oct 20</span><span class="th"><svg class="sk" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><filter id="pen" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter><filter id="pen2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter><pattern id="hat" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="5" stroke="currentColor" stroke-width="1.1"/></pattern></defs><g filter="url(#pen)" stroke-width="2.4" opacity=".9"><path d="M30 104C40 92 56 90 70 92C74 64 98 58 106 88C112 94 124 94 134 92C146 86 150 66 152 48C156 40 172 38 182 46C186 52 176 58 168 56C160 58 162 72 160 88C158 102 152 114 148 118C120 128 80 128 52 120C40 116 34 110 30 104Z"/><path d="M138 120L136 170M152 114L154 170M60 122L56 170M78 124L82 170"/><path d="M130 170H142M148 170H160M50 170H62M76 170H88"/><path d="M30 104Q20 112 24 128"/><circle cx="166" cy="46" r="1.6"/><path d="M154 74Q184 100 174 158"/><path d="M168 158H182M175 150V176"/></g><g filter="url(#pen2)" stroke-width="1.3" opacity=".5" transform="translate(1.6 -1.2)"><path d="M30 104C40 92 56 90 70 92C74 64 98 58 106 88C112 94 124 94 134 92C146 86 150 66 152 48C156 40 172 38 182 46C186 52 176 58 168 56C160 58 162 72 160 88C158 102 152 114 148 118C120 128 80 128 52 120C40 116 34 110 30 104Z"/><path d="M138 120L136 170M152 114L154 170M60 122L56 170M78 124L82 170"/><path d="M130 170H142M148 170H160M50 170H62M76 170H88"/><path d="M30 104Q20 112 24 128"/><circle cx="166" cy="46" r="1.6"/><path d="M154 74Q184 100 174 158"/><path d="M168 158H182M175 150V176"/></g><g fill="url(#hat)" stroke="none" opacity=".35" filter="url(#pen2)"><path d="M70 92C74 64 98 58 106 88Z"/><path d="M60 100H130M64 112H134"/></g></svg></span><span class="t">tie your camel, then follow up</span></a></li>
+      <li><a href="a-good-word-is-charity/"><span class="d">Oct 13</span><span class="th"><svg class="sk" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><filter id="pen" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter><filter id="pen2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter><pattern id="hat" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="5" stroke="currentColor" stroke-width="1.1"/></pattern></defs><g filter="url(#pen)" stroke-width="2.4" opacity=".9"><path d="M34 38H166a10 10 0 0 1 10 10V118a10 10 0 0 1-10 10H92L56 160V128H34a10 10 0 0 1-10-10V48A10 10 0 0 1 34 38Z"/><path transform="translate(100 98) scale(0.95)" d="M0 0C-36-22-28-46 0-28C28-46 36-22 0 0Z"/><path d="M150 20l4 12M166 26l-8 10M176 40l-12 4"/></g><g filter="url(#pen2)" stroke-width="1.3" opacity=".5" transform="translate(1.6 -1.2)"><path d="M34 38H166a10 10 0 0 1 10 10V118a10 10 0 0 1-10 10H92L56 160V128H34a10 10 0 0 1-10-10V48A10 10 0 0 1 34 38Z"/><path transform="translate(100 98) scale(0.95)" d="M0 0C-36-22-28-46 0-28C28-46 36-22 0 0Z"/><path d="M150 20l4 12M166 26l-8 10M176 40l-12 4"/></g><g fill="url(#hat)" stroke="none" opacity=".35" filter="url(#pen2)"><path d="M36 50H164V116H36Z"/></g></svg></span><span class="t">a good word is charity. so is a clear email.</span></a></li>
+      <li><a href="love-for-your-partner-what-you-love-for-yourself/"><span class="d">Oct 6</span><span class="th"><svg class="sk" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><filter id="pen" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter><filter id="pen2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter><pattern id="hat" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="5" stroke="currentColor" stroke-width="1.1"/></pattern></defs><g filter="url(#pen)" stroke-width="2.4" opacity=".9"><g transform="translate(66 64) scale(1.25)"><path d="M0-36V0M-14 0Q0-16 14 0"/><path d="M-14 0Q-26 30-14 60H14Q26 30 14 0Z"/><path d="M-6 0Q-12 30-6 60M6 0Q12 30 6 60"/><path d="M-10 60V70H10V60"/><path d="M0 22Q-6 32 0 42Q6 32 0 22Z"/></g><g transform="translate(138 90) scale(1.1)"><path d="M0-36V0M-14 0Q0-16 14 0"/><path d="M-14 0Q-26 30-14 60H14Q26 30 14 0Z"/><path d="M-6 0Q-12 30-6 60M6 0Q12 30 6 60"/><path d="M-10 60V70H10V60"/><path d="M0 22Q-6 32 0 42Q6 32 0 22Z"/></g><path d="M66 28Q100 12 138 54"/></g><g filter="url(#pen2)" stroke-width="1.3" opacity=".5" transform="translate(1.6 -1.2)"><g transform="translate(66 64) scale(1.25)"><path d="M0-36V0M-14 0Q0-16 14 0"/><path d="M-14 0Q-26 30-14 60H14Q26 30 14 0Z"/><path d="M-6 0Q-12 30-6 60M6 0Q12 30 6 60"/><path d="M-10 60V70H10V60"/><path d="M0 22Q-6 32 0 42Q6 32 0 22Z"/></g><g transform="translate(138 90) scale(1.1)"><path d="M0-36V0M-14 0Q0-16 14 0"/><path d="M-14 0Q-26 30-14 60H14Q26 30 14 0Z"/><path d="M-6 0Q-12 30-6 60M6 0Q12 30 6 60"/><path d="M-10 60V70H10V60"/><path d="M0 22Q-6 32 0 42Q6 32 0 22Z"/></g><path d="M66 28Q100 12 138 54"/></g><g fill="url(#hat)" stroke="none" opacity=".35" filter="url(#pen2)"><path d="M-14 0Q-26 30-14 60H14Q26 30 14 0Z" transform="translate(66 64) scale(1.25)"/><path d="M-14 0Q-26 30-14 60H14Q26 30 14 0Z" transform="translate(138 90) scale(1.1)"/></g></svg></span><span class="t">love for your partner what you love for yourself</span></a></li>
+      </ul>
   </section>
 
   <section id="contact" class="contact">
